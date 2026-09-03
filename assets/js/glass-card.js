@@ -28,7 +28,9 @@
   /* ---- device render, studio-grey keyed to transparent (once, on load) ---- */
   var keyed = null;
   var raw = new Image();
-  raw.crossOrigin = "anonymous";
+  // no crossOrigin: the render is same-origin, so the canvas is not tainted on a
+  // real host and getImageData keys it cleanly; setting it would only risk
+  // breaking the load when the page is opened straight off disk.
   raw.onload = function () {
     var oc = document.createElement("canvas");
     oc.width = raw.naturalWidth || raw.width;
@@ -64,8 +66,23 @@
       octx.putImageData(d, 0, 0);
       keyed = oc;
     } catch (e) {
-      // canvas tainted (image served without CORS) — fall back to the raw render
-      keyed = raw;
+      // canvas tainted (opened as file:// or served without CORS) — can't read
+      // pixels to key. Feather the flat studio background with a radial mask.
+      var mc = document.createElement("canvas");
+      mc.width = oc.width; mc.height = oc.height;
+      var mctx = mc.getContext("2d");
+      mctx.drawImage(oc, 0, 0);
+      mctx.globalCompositeOperation = "destination-in";
+      var rgm = mctx.createRadialGradient(
+        mc.width * 0.45, mc.height * 0.55, mc.width * 0.10,
+        mc.width * 0.45, mc.height * 0.55, mc.width * 0.60
+      );
+      rgm.addColorStop(0, "rgba(0,0,0,1)");
+      rgm.addColorStop(0.68, "rgba(0,0,0,1)");
+      rgm.addColorStop(1, "rgba(0,0,0,0)");
+      mctx.fillStyle = rgm;
+      mctx.fillRect(0, 0, mc.width, mc.height);
+      keyed = mc;
     }
   };
   raw.onerror = function () { keyed = null; };

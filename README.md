@@ -15,14 +15,40 @@ Static HTML/CSS/JS. No build step, no dependencies.
 
 ## Preview / deploy
 
-There is no local server dependency. To preview, open `index.html` in a browser,
-or serve the folder with anything static:
+Open `index.html` directly in a browser to preview — every script is a plain
+classic script, so `file://` works. One caveat: browsers taint a canvas that
+reads a `file://` image, so the hero's studio-grey key-out falls back to a soft
+radial mask until the page is served over HTTP.
+
+For the real thing, serve the folder:
 
 ```bash
-npx serve aerocardia-site
+node serve.mjs
 ```
 
-Deploy the folder as-is to Netlify, Vercel, Cloudflare Pages or GitHub Pages.
+`serve.mjs` is a zero-dependency static server (port 8123, `PORT=` to change).
+Or use anything static — `npx serve`, `python -m http.server`. Deploy the folder
+as-is to Netlify, Vercel, Cloudflare Pages or GitHub Pages.
+
+## Hero: the liquid-glass card
+
+The home hero has no video file. `assets/js/glass-card.js` paints an animated
+scene (deep teal aurora + the floating `device-black-teal.png` render, studio
+background keyed out live) to an offscreen canvas each frame, then blits it to
+the full-bleed `#bg-stage` backdrop **and** to `#dup-stage`, a viewport-aligned
+copy sitting behind `.glass-card` that carries the SVG filter
+`#liquid-glass-refraction` (a per-channel `feDisplacementMap` chromatic
+dispersion). The card's `overflow:hidden` + radius clip it into a glass window.
+
+To swap in a real clip later: put a `<video>` in the hero and draw it instead of
+the generated scene inside `draw()` — the rest of the pipeline is unchanged.
+
+## Nav: shared shell
+
+Every page carries the same fixed `.topbar` (hamburger + brand left, waitlist
+pill top-right) and the same `#menu` fullscreen panel. `assets/js/menu.js`
+drives open/close/focus/Escape and the topbar's scrolled state. Interior pages
+set `<body class="interior">` (permanently-solid topbar + top padding).
 
 ## Design system
 
@@ -82,14 +108,15 @@ and consider WebP. `favicon.png` is 1500 px — generate a real 32×32 / 180×18
 
 ## The "animated render video"
 
-Not included. AI video generation was not available in this environment, and the
-supplied renders are single-angle stills (not a turntable), so a true 360° spin
-can't be faked from them. Current treatment: the device floats on a studio
-"stage" card (CSS), and colourways cross-fade on interaction.
+There is still no real video file — AI video generation and video encoding were
+not available in the build environment, and the renders are single-angle stills.
 
-Options to add real motion later:
-- Export a turntable frame sequence (24–72 frames) from the CAD/render tool and
-  wire it to scroll position — the hook is already in `main.js` (`data-scrub`).
-- Generate a clip with an external tool (Runway, Kling, Sora) from
-  `device-black-teal.png`, drop it in `assets/video/`, and replace the `.stage`
-  markup on the hero / how-it-works with `<video autoplay muted loop playsinline>`.
+The **home hero** now fakes convincing motion in real time: `glass-card.js`
+animates the render on a canvas (drift, rotation, aurora) behind the refractive
+glass card. See "Hero: the liquid-glass card" above.
+
+The **how-it-works** page and product colourway toggles still use the CSS
+`.stage` float + interaction cross-fade. To add a turntable there, export a
+frame sequence and wire it to `main.js`'s `data-scrub` hook, or drop a real clip
+into `assets/video/` and swap the `.stage` markup for `<video autoplay muted
+loop playsinline>`.
