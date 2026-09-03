@@ -9,30 +9,45 @@
 <link rel="icon" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
+<body class="interior">
 
-<header class="nav">
-  <div class="nav__inner">
-    <a class="brand" href="index.html" aria-label="AeroCardia home">
-      <img class="brand__mark" src="assets/img/favicon.png" alt="" width="26" height="26" />
-      AeroCardia
+<header class="topbar" data-topbar>
+  <div class="topbar__left">
+    <button class="menu-open" id="menu-open" aria-expanded="false" aria-controls="menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <span class="menu-open__label">Menu</span>
+    </button>
+    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home">
+      <img src="assets/img/favicon.png" alt="" width="24" height="24" />AeroCardia
     </a>
-    <nav><ul class="nav__links">
-      <li><a href="product.html" aria-current="page">Product</a></li>
-      <li><a href="how-it-works.html">How it works</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#blog">Blog</a></li>
-    </ul></nav>
-    <div class="nav__cta">
-      <a class="btn btn--ghost btn--sm" href="how-it-works.html">See how it works</a>
-      <a class="btn btn--primary btn--sm" href="waitlist.html">Join the waitlist</a>
-      <button class="nav__toggle" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg></button>
-    </div>
   </div>
+  <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html">Join the waitlist</a>
 </header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__backdrop" data-menu-close></div>
+  <nav class="menu__panel" aria-label="Main menu">
+    <button class="menu__close" id="menu-close" data-menu-close>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      Close
+    </button>
+    <div class="menu__nav">
+      <a class="menu__link" href="index.html"><span class="menu__linkText">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="product.html"><span class="menu__linkText">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="about.html"><span class="menu__linkText">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html#blog"><span class="menu__linkText">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="menu__foot">
+      <span class="menu__footLabel">Get in touch</span>
+      <a class="menu__mail" href="mailto:info@aerocardia.com">info@aerocardia.com</a>
+      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html">Join the waitlist</a></div>
+    </div>
+  </nav>
+</div>
 
 <main>
 
@@ -183,6 +198,7 @@
   </div>
 </footer>
 
+<script src="assets/js/menu.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

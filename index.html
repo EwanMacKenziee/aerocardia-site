@@ -9,63 +9,131 @@
 <link rel="icon" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
-<header class="nav">
-  <div class="nav__inner">
-    <a class="brand" href="index.html" aria-label="AeroCardia home">
-      <img class="brand__mark" src="assets/img/favicon.png" alt="" width="26" height="26" />
-      AeroCardia
+<!-- ============ TOPBAR (shared) ============ -->
+<header class="topbar" data-topbar>
+  <div class="topbar__left">
+    <button class="menu-open" id="menu-open" aria-expanded="false" aria-controls="menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      <span class="menu-open__label">Menu</span>
+    </button>
+    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home">
+      <img src="assets/img/favicon.png" alt="" width="24" height="24" />AeroCardia
     </a>
-    <nav>
-      <ul class="nav__links">
-        <li><a href="product.html">Product</a></li>
-        <li><a href="how-it-works.html">How it works</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#blog">Blog</a></li>
-      </ul>
-    </nav>
-    <div class="nav__cta">
-      <a class="btn btn--ghost btn--sm" href="how-it-works.html">See how it works</a>
-      <a class="btn btn--primary btn--sm" href="waitlist.html">Join the waitlist</a>
-      <button class="nav__toggle" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
-      </button>
-    </div>
   </div>
+  <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html">Join the waitlist</a>
 </header>
+
+<!-- ============ FULLSCREEN MENU (shared) ============ -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__backdrop" data-menu-close></div>
+  <nav class="menu__panel" aria-label="Main menu">
+    <button class="menu__close" id="menu-close" data-menu-close>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      Close
+    </button>
+    <div class="menu__nav">
+      <a class="menu__link" href="index.html"><span class="menu__linkText">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="product.html"><span class="menu__linkText">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="about.html"><span class="menu__linkText">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html#blog"><span class="menu__linkText">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="menu__foot">
+      <span class="menu__footLabel">Get in touch</span>
+      <a class="menu__mail" href="mailto:info@aerocardia.com">info@aerocardia.com</a>
+      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html">Join the waitlist</a></div>
+    </div>
+  </nav>
+</div>
+
+<!-- ============ LIQUID-GLASS SVG FILTER ============ -->
+<svg id="liquid-glass-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="liquid-glass-refraction" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.015" numOctaves="3" result="noise" />
+      <feColorMatrix in="SourceAlpha" type="matrix" result="boosted_alpha"
+        values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 100 0" />
+      <feGaussianBlur in="boosted_alpha" stdDeviation="45" result="blurred_alpha" />
+      <feComponentTransfer in="blurred_alpha" result="edge_mask">
+        <feFuncA type="linear" slope="-1.3" intercept="1" />
+      </feComponentTransfer>
+      <feComposite in="noise" in2="edge_mask" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="masked_noise" />
+      <feDisplacementMap in="SourceGraphic" in2="masked_noise" scale="65" xChannelSelector="R" yChannelSelector="G" result="red_displaced" />
+      <feColorMatrix in="red_displaced" type="matrix" result="red"
+        values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+      <feDisplacementMap in="SourceGraphic" in2="masked_noise" scale="56" xChannelSelector="R" yChannelSelector="G" result="green_displaced" />
+      <feColorMatrix in="green_displaced" type="matrix" result="green"
+        values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+      <feDisplacementMap in="SourceGraphic" in2="masked_noise" scale="47" xChannelSelector="R" yChannelSelector="G" result="blue_displaced" />
+      <feColorMatrix in="blue_displaced" type="matrix" result="blue"
+        values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+      <feBlend in="red" in2="green" mode="screen" result="rg" />
+      <feBlend in="rg" in2="blue" mode="screen" result="chromatic_dispersion" />
+    </filter>
+  </defs>
+</svg>
 
 <main>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero__glow"></div>
-  <div class="wrap">
-    <div class="hero__grid">
-      <div class="reveal in">
+<section class="hero-glass">
+  <canvas id="bg-stage" aria-hidden="true" data-render="assets/img/device-black-teal.png"></canvas>
+
+  <div class="hero-glass__inner">
+    <div class="hero-glass__row">
+      <div class="hero-glass__copy reveal in">
         <span class="eyebrow">Portable VO2 &amp; breath sensor</span>
-        <h1>Know your VO2&nbsp;max.<br />Anywhere.</h1>
-        <p class="lede">AeroCardia is a lightweight sensor you breathe through. It reads your oxygen uptake, ventilation and effort in real time — on the road, on the trail, on the bike. The lab test that predicts endurance and longevity, now in every session.</p>
-        <div class="hero__actions">
+        <h1>Real-time guidance<br />for every run &amp; ride.</h1>
+        <p class="hero-glass__lede">Clip on the cup, breathe like you always do, and go. AeroCardia reads your oxygen uptake, ventilation and effort live — the lab test for endurance and longevity, in every session.</p>
+        <div class="hero-glass__actions">
           <a class="btn btn--primary btn--lg" href="waitlist.html">Join the waitlist <span class="arrow">&rarr;</span></a>
           <a class="btn btn--ghost btn--lg" href="how-it-works.html">See how it works</a>
         </div>
-        <p class="hero__note">For general wellness and fitness use. AeroCardia is not a medical device.</p>
+        <p class="hero-glass__note">For general wellness and fitness use. AeroCardia is not a medical device.</p>
       </div>
-      <div class="reveal in" data-d="1">
-        <div class="stage stage--tall">
-          <div class="stage__frames stage__float">
-            <img src="assets/img/device-black-teal.png" alt="AeroCardia breath sensor" />
-          </div>
-          <span class="stage__badge">AeroCardia sensor pod</span>
+
+      <aside class="glass-card" data-glass-card>
+        <div id="dup-stage-container"><canvas id="dup-stage"></canvas></div>
+        <div class="glass-card__frost" aria-hidden="true"></div>
+
+        <div class="glass-card__head">
+          <h2 class="glass-card__title">From your last session</h2>
+          <span class="glass-card__index">//02</span>
         </div>
-      </div>
+
+        <div class="glass-card__body">
+          <div class="glass-metric">
+            <span class="glass-metric__k">VO2</span>
+            <span class="glass-metric__v">44.1<small>ml/kg/min</small></span>
+          </div>
+          <div class="glass-metric">
+            <span class="glass-metric__k">Minute ventilation</span>
+            <span class="glass-metric__v">96<small>L/min</small></span>
+          </div>
+          <div class="glass-metric">
+            <span class="glass-metric__k">RER</span>
+            <span class="glass-metric__v">0.98</span>
+          </div>
+          <div class="glass-metric">
+            <span class="glass-metric__k">Threshold</span>
+            <span class="glass-metric__v">held<small>52:00</small></span>
+          </div>
+        </div>
+
+        <svg class="glass-card__wave" viewBox="0 0 220 50" fill="none" aria-hidden="true">
+          <path d="M0 30 C10 30 12 45 18 45 C24 45 26 10 34 10 C42 10 44 40 52 40 C60 40 62 5 70 5 C78 5 80 42 88 42 C96 42 98 15 106 15 C114 15 116 38 124 38 C132 38 134 20 142 20 C150 20 152 35 160 35 C168 35 170 22 178 22 C186 22 188 32 196 32 C204 32 210 28 220 28"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" />
+        </svg>
+      </aside>
     </div>
   </div>
+
+  <span class="hero-scroll" aria-hidden="true">Scroll</span>
 </section>
 
 <!-- ============ TRUST STRIP ============ -->
@@ -81,30 +149,60 @@
   </div>
 </section>
 
-<!-- ============ REAL-TIME GUIDANCE ============ -->
+<!-- ============ NUMBERED CARDS (Stryd-style) ============ -->
 <section class="section" id="features">
   <div class="wrap">
     <div class="narrow reveal">
-      <span class="eyebrow">Real-time guidance</span>
-      <h2>Real-time guidance for every run and ride.</h2>
+      <span class="eyebrow">What you get</span>
+      <h2>Personalised run &amp; ride training. Powered by the best data.</h2>
       <p class="lede">Heart rate tells you how hard your heart is working. AeroCardia tells you what your whole system is doing — how much oxygen you are actually using, and how close you are to your ceiling.</p>
     </div>
-    <div class="cards cards--3" style="margin-top:52px">
-      <div class="card reveal" data-d="1">
-        <div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Live VO2 &amp; ventilation</h3>
-        <p>Watch oxygen uptake and breathing respond to every hill and interval — streamed to your watch or head unit.</p>
-      </div>
-      <div class="card reveal" data-d="2">
-        <div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round"/></svg></div>
-        <h3>True effort zones</h3>
-        <p>Zones anchored to your ventilatory thresholds, not a guess from max heart rate. Know when you are truly easy, and when you are past tempo.</p>
-      </div>
-      <div class="card reveal" data-d="3">
-        <div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-10a5 5 0 019-3 5 5 0 019 3c-2 5.5-9 10-9 10z"/></svg></div>
-        <h3>Longevity signal</h3>
-        <p>VO2 max is one of the strongest predictors of healthspan. Track yours over months and see the trend that matters most.</p>
-      </div>
+    <div class="numbered" style="margin-top:48px">
+      <article class="ncard reveal" data-d="1">
+        <div class="ncard__media">
+          <img src="assets/img/cyclists-bw.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/aero-ride/800/600?grayscale'" alt="Cyclist riding at speed" loading="lazy" />
+          <span class="ncard__n">1</span>
+        </div>
+        <div class="ncard__body">
+          <h3>Real-time guidance</h3>
+          <p>Live VO2, ventilation and effort stream to your watch or head unit — so you hold the right zone on every hill and interval, not a guess from max heart rate.</p>
+          <ul class="ncard__list">
+            <li>Live oxygen &amp; breathing feedback</li>
+            <li>Zones from measured thresholds</li>
+            <li>Works on the road, trail and bike</li>
+          </ul>
+        </div>
+      </article>
+      <article class="ncard reveal" data-d="2">
+        <div class="ncard__media">
+          <img src="assets/img/vo2-phases.jpg" alt="Runner training at sunrise" loading="lazy" />
+          <span class="ncard__n">2</span>
+        </div>
+        <div class="ncard__body">
+          <h3>Train in phases</h3>
+          <p>Build an aerobic base, test where you are, then sharpen for race day. Each session becomes feedback: was that aerobic, or did you drift?</p>
+          <ul class="ncard__list">
+            <li>Foundation, test and peak blocks</li>
+            <li>Session review after every workout</li>
+            <li>VO2 max tracked as a long-term trend</li>
+          </ul>
+        </div>
+      </article>
+      <article class="ncard reveal" data-d="3">
+        <div class="ncard__media">
+          <img src="https://picsum.photos/seed/aero-race/800/600?grayscale" alt="Runner racing" loading="lazy" />
+          <span class="ncard__n">3</span>
+        </div>
+        <div class="ncard__body">
+          <h3>Race-day targets</h3>
+          <p>Turn months of real gas-exchange data into pacing you can trust — from a 10k to a marathon or a gran fondo, know what is sustainable before you spend it.</p>
+          <ul class="ncard__list">
+            <li>Threshold pace &amp; power targets</li>
+            <li>Fuelling cues from live RER</li>
+            <li>Peak when it matters</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -123,7 +221,7 @@
       </div>
       <div class="reveal" data-d="1">
         <span class="eyebrow">Setup</span>
-        <h2>On in seconds. Breathe like you always do.</h2>
+        <h2>Clip it on in seconds and go.</h2>
         <p class="lede">A soft cup seals over your nose and mouth, a light strap holds it, and the sensor pod does the rest. No mouthpiece to bite, no calibration ritual, no cart of gas analysers.</p>
         <ul>
           <li>Pairs over Bluetooth &amp; ANT+ with Garmin, Wahoo, Apple Watch and Zwift</li>
@@ -137,54 +235,23 @@
   </div>
 </section>
 
-<!-- ============ PERSONALISED TRAINING ============ -->
+<!-- ============ TRAIN IN PHASES ============ -->
 <section class="section">
   <div class="wrap">
     <div class="split split--reverse">
-      <div class="split__media reveal">
-        <div style="padding:26px;width:100%">
-          <div style="background:var(--bg-elev-2);border:1px solid var(--line);border-radius:14px;padding:20px">
-            <div style="display:flex;justify-content:space-between;color:var(--text-mute);font-size:13px;margin-bottom:14px"><span>Today &middot; Threshold</span><span>52:00</span></div>
-            <div style="display:flex;gap:6px;align-items:flex-end;height:90px">
-              <span style="flex:1;background:var(--good);height:30%"></span>
-              <span style="flex:1;background:var(--good);height:40%"></span>
-              <span style="flex:1;background:var(--accent);height:70%"></span>
-              <span style="flex:1;background:var(--accent);height:85%"></span>
-              <span style="flex:1;background:var(--accent);height:72%"></span>
-              <span style="flex:1;background:var(--warn);height:95%"></span>
-              <span style="flex:1;background:var(--good);height:35%"></span>
-            </div>
-            <div style="display:flex;justify-content:space-between;margin-top:14px;font-size:13px;color:var(--text-dim)"><span>VO2 44.1</span><span>V&#775;E 96 L/min</span><span>RER 0.98</span></div>
-          </div>
-        </div>
+      <div class="split__media reveal" style="padding:0;border:0;background:none">
+        <img src="assets/img/vo2-phases.jpg" alt="Runner stretching at sunrise before a session" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" />
       </div>
       <div class="reveal" data-d="1">
-        <span class="eyebrow">Training</span>
-        <h2>Personalised run &amp; ride training. Powered by the best data.</h2>
-        <p class="lede">When your zones come from real gas-exchange data, every workout lands where it should. AeroCardia turns each session into feedback: was that aerobic, or did you drift? Are you ready to build, or still recovering?</p>
-        <p><a class="link" href="how-it-works.html#training">See the training approach <span class="arrow">&rarr;</span></a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TRAIN IN PHASES ============ -->
-<section class="section" style="background:var(--bg-elev);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="split">
-      <div class="reveal">
         <span class="eyebrow">From the blog</span>
         <h2>Train in phases. Peak when it matters.</h2>
         <p class="lede">Raising VO2 max is not about going hard every day. It is about building an aerobic base, testing where you are, then sharpening for the event that counts.</p>
-        <ul>
-          <li><strong>Foundation</strong> — easy-paced volume that grows your aerobic engine. AeroCardia keeps you genuinely easy.</li>
-          <li><strong>Test</strong> — a structured ramp gives you a real VO2 max number and fresh threshold paces.</li>
-          <li><strong>Peak</strong> — short intervals near VO2 max, spaced for recovery, so you sharpen without digging a hole.</li>
-        </ul>
+        <div class="cards cards--3" style="gap:14px;margin-top:22px">
+          <div class="phase phase--1"><span class="phase__tag">Foundation</span><p>Easy-paced volume that grows your aerobic engine. AeroCardia keeps you genuinely easy.</p></div>
+          <div class="phase phase--2"><span class="phase__tag">Test</span><p>A structured ramp gives you a real VO2 max number and fresh threshold paces.</p></div>
+          <div class="phase phase--3"><span class="phase__tag">Peak</span><p>Short intervals near VO2 max, spaced for recovery, so you sharpen without digging a hole.</p></div>
+        </div>
         <p style="margin-top:22px"><a class="link" href="https://aerocardia.com/blog">Read: How to improve your VO2 max <span class="arrow">&rarr;</span></a></p>
-      </div>
-      <div class="split__media reveal" data-d="1" style="padding:0;border:0;background:none">
-        <img src="assets/img/vo2-phases.jpg" alt="Runner stretching at sunrise before a session" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" />
       </div>
     </div>
   </div>
@@ -197,7 +264,7 @@
       <div class="reveal">
         <span class="eyebrow">Championship edition</span>
         <h2>Sport your team's colours.</h2>
-        <p class="lede">Express your country with pride. Match your sensor to your national colours for the UCI Road World Championships — or your club, your flag, your race day.</p>
+        <p class="lede">Express your country with enthusiasm. Match your sensor to your national colours for the UCI Road World Championships — or your club, your flag, your race day.</p>
         <div class="flags" role="group" aria-label="Choose a nation">
           <button class="flag is-active" data-country="Netherlands" data-cw="Copper" data-accent="#F36F21" data-img="assets/img/device-black-copper-side.png">
             <span class="flag__dot" style="background:#F36F21"></span>Netherlands
@@ -208,11 +275,14 @@
           <button class="flag" data-country="Slovenia" data-cw="Signal Teal" data-accent="#29B0A6" data-img="assets/img/device-black-teal.png">
             <span class="flag__dot" style="background:#29B0A6"></span>Slovenia
           </button>
+          <button class="flag" data-country="Great Britain" data-cw="Cobalt" data-accent="#3A6DF0" data-img="assets/img/device-566.png">
+            <span class="flag__dot" style="background:linear-gradient(90deg,#C8102E 45%,#fff 45% 55%,#012169 55%)"></span>Great Britain
+          </button>
           <button class="flag" data-country="Belgium" data-cw="Sunflower" data-accent="#F7C531" data-img="assets/img/device-white-yellow.png">
             <span class="flag__dot" style="background:linear-gradient(90deg,#1a1a1a 33%,#F7C531 33% 66%,#EF3340 66%)"></span>Belgium
           </button>
         </div>
-        <p class="muted" style="font-size:13.5px"><strong data-uci-label style="color:var(--text)">Netherlands</strong> &middot; <span data-uci-cw>Copper</span> colourway. Great Britain, France and more editions confirmed closer to the race.</p>
+        <p class="muted" style="font-size:13.5px"><strong data-uci-label style="color:var(--text)">Netherlands</strong> &middot; <span data-uci-cw>Copper</span> colourway. France, Slovenia and more editions confirmed closer to the race.</p>
       </div>
       <div class="reveal" data-d="1">
         <div class="stage" data-uci-shell style="--shell-accent:#F36F21">
@@ -336,6 +406,8 @@
   </div>
 </footer>
 
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/glass-card.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
