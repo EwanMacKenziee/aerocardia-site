@@ -54,19 +54,31 @@ and consider WebP. `favicon.png` is 1500 px — generate a real 32×32 / 180×18
 
 ## To finish wiring
 
-1. **Waitlist link** — `waitlist.html` has a button pointing at a placeholder
-   (`https://aerocardia.com/#waitlist`). Search `WAITLIST FORM` in that file and
-   drop in the live URL, or uncomment the `<iframe>` block to embed it.
+1. **Waitlist** — `waitlist.html` embeds JotForm `262305901704046` in an `<iframe>`
+   with a "open in new tab" fallback. To swap forms, change the `src` in that file.
    The "Join the waitlist" buttons in every nav/CTA point to `waitlist.html`.
-2. **Stock photography** — the horizontal idle strip and two blog thumbnails use
-   `picsum.photos` placeholders (grayscale). Replace `https://picsum.photos/...`
-   with curated running/cycling shots.
+   *(Optional: add JotForm's `jotform-form-embed` auto-resize script if the form
+   height changes a lot.)*
+2. **Stock photography** — drop `cyclists-bw.jpg` (the B&W motion-blur cyclists shot)
+   into `assets/img/`; it's already referenced by the first blog card and the idle
+   strip, with a `picsum.photos` fallback until the file exists. The remaining idle
+   strip / blog images are grayscale `picsum.photos` placeholders — replace with
+   curated running/cycling shots.
 3. **Blog** — cards link to `https://aerocardia.com/blog`. Point them at the real
    post URLs when the blog is migrated.
-4. **Device colourways for UCI** — the "Sport your team's colours" toggle currently
-   maps countries to the nearest existing render. Commission true per-nation
-   renders (or recolour the band in the 3D source) for GB red/blue, NL orange, etc.
-5. **Social links** — LinkedIn/Instagram hrefs are guesses; confirm handles.
+4. **Colourways** — `product.html` "Style meets performance" and `index.html`
+   "Sport your team's colours" both toggle between the real renders:
+   | Colourway | Render | UCI nation (home page) |
+   |---|---|---|
+   | Signal Teal | `device-black-teal.png` | Slovenia |
+   | Copper | `device-black-copper-hero.png` | Netherlands |
+   | Racing Green | `device-green-gold.png` | Ireland |
+   | Cobalt | `device-566.png` | Great Britain |
+   | Sunflower | `device-white-yellow.png` | Belgium |
+   | Arctic White | `device-white-teal.png` | — |
+   For exact national colours (GB red/white/blue, NL orange, FR tricolore) you'll
+   want dedicated renders, or recolour the accent band in the 3D source.
+5. **Social** — LinkedIn `company/aerocardia/`, Instagram `aerocardia` (confirmed).
 
 ## The "animated render video"
 

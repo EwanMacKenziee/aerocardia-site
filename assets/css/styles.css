@@ -127,7 +127,7 @@ p { margin: 0 0 1em; }
 .hero__note { margin-top: 20px; font-size: 13.5px; color: var(--text-mute); }
 .hero__glow {
   position: absolute; width: 720px; height: 720px; right: -180px; top: -220px; pointer-events: none;
-  background: radial-gradient(circle, rgba(46,155,255,0.22), transparent 62%); filter: blur(20px);
+  background: radial-gradient(circle, rgba(41,176,166,0.20), transparent 62%); filter: blur(20px);
 }
 @media (max-width: 880px) {
   .hero__grid { grid-template-columns: 1fr; gap: 34px; }
@@ -147,17 +147,22 @@ p { margin: 0 0 1em; }
 .device__img--spin { animation: float 7s ease-in-out infinite; }
 @keyframes float { 0%,100% { transform: translateY(-8px) rotate(-2deg); } 50% { transform: translateY(8px) rotate(2deg); } }
 
-/* Product stage — renders sit on a soft studio card (no bg removal needed) */
+/* Product stage — renders sit on a light studio card.
+   The supplied renders have white / light-grey studio backgrounds;
+   mix-blend-mode:multiply drops that background against the light card
+   so no per-image cut-out is needed. (Re-export as transparent PNG for
+   a perfectly clean result — see README.) */
 .stage {
   position: relative; width: 100%; border-radius: 22px; overflow: hidden;
-  background: radial-gradient(120% 90% at 50% 22%, #20262F 0%, #14181F 55%, #0F1319 100%);
-  border: 1px solid var(--line); aspect-ratio: 4 / 3; display: grid; place-items: center;
+  background: linear-gradient(158deg, #EFF0F1 0%, #DFE2E4 60%, #D3D7DA 100%);
+  border: 1px solid var(--line-strong); aspect-ratio: 4 / 3; display: grid; place-items: center;
+  isolation: isolate;
 }
 .stage--tall { aspect-ratio: 1 / 1; }
 .stage__frames { position: relative; width: 92%; aspect-ratio: 16/10; }
 .stage__frames img {
   width: 100%; height: 100%; object-fit: contain;
-  filter: drop-shadow(0 30px 45px rgba(0,0,0,0.5));
+  mix-blend-mode: multiply;
   transition: opacity .5s var(--ease);
 }
 /* opt-in auto colourway cross-fade */
@@ -180,9 +185,9 @@ p { margin: 0 0 1em; }
 .stage__float { animation: float 8s ease-in-out infinite; }
 .stage__badge {
   position: absolute; left: 18px; bottom: 16px; font-size: 12px; letter-spacing: .04em;
-  color: var(--text-mute); display: flex; align-items: center; gap: 8px;
+  color: #566; display: flex; align-items: center; gap: 8px; font-weight: 600;
 }
-.stage__badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.stage__badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-deep); }
 @media (prefers-reduced-motion: reduce) {
   .stage__frames img { animation: none; opacity: 1; }
   .stage__frames img:not(:first-child) { display: none; }
