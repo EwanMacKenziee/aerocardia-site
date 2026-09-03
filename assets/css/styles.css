@@ -339,6 +339,21 @@ p { margin: 0 0 1em; }
 .cta-band .btn--primary:hover { background: #eaf3ff; }
 @media (max-width: 700px) { .cta-band { padding: 38px 22px; } }
 
+/* ---------- Backer / partner logos ---------- */
+.backers { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
+.backer {
+  display: grid; place-items: center; height: 58px; padding: 0 22px;
+  background: #F5F5F3; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px;
+  opacity: 0.86; transition: opacity .18s var(--ease), transform .18s var(--ease);
+}
+.backer:hover { opacity: 1; transform: translateY(-2px); }
+.backer img { height: 30px; width: auto; max-width: 180px; object-fit: contain; display: block; }
+.backer__txt {
+  font-size: 13.5px; font-weight: 600; color: #2a2f36; text-align: center; line-height: 1.25;
+  max-width: 15ch; letter-spacing: -0.01em;
+}
+@media (max-width: 640px) { .backer { height: 50px; padding: 0 16px; } .backer img { height: 24px; } }
+
 /* ---------- Stat pills ---------- */
 .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 @media (max-width: 700px) { .stats { grid-template-columns: 1fr; } }
