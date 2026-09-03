@@ -1,0 +1,5 @@
+# scratch / preview build files
+_*.html
+.DS_Store
+Thumbs.db
+*.log
