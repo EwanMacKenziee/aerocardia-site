@@ -130,24 +130,28 @@
     if (keyed && keyed.width) {
       var srcH = keyed.height || keyed.naturalHeight;
       var srcW = keyed.width || keyed.naturalWidth;
-      var scale = (Math.min(w, h) / srcH) * (w < 760 ? 0.94 : 0.72);
+      // ambient, not a centrepiece: sits off to the right, behind the card,
+      // clear of the headline column.
+      var scale = (Math.min(w, h) / srcH) * (w < 760 ? 0.62 : 0.46);
       var iw = srcW * scale, ih = srcH * scale;
-      var cx = w * (w < 760 ? 0.5 : 0.45) + (reduce ? 0 : Math.sin(d * 0.00015) * w * 0.02);
-      var cy = h * 0.47 + (reduce ? 0 : Math.cos(d * 0.00011) * h * 0.028);
+      var cx = w * (w < 760 ? 0.60 : 0.72) + (reduce ? 0 : Math.sin(d * 0.00015) * w * 0.015);
+      var cy = h * (w < 760 ? 0.28 : 0.34) + (reduce ? 0 : Math.cos(d * 0.00011) * h * 0.024);
       var rot = reduce ? 0 : Math.sin(d * 0.00008) * 0.05;
       ctx.save();
       ctx.translate(cx, cy);
       ctx.rotate(rot);
-      ctx.shadowColor = "rgba(0,0,0,0.5)";
-      ctx.shadowBlur = 55;
-      ctx.shadowOffsetY = 38;
+      ctx.globalAlpha = 0.82;
+      ctx.shadowColor = "rgba(0,0,0,0.45)";
+      ctx.shadowBlur = 70;
+      ctx.shadowOffsetY = 44;
       ctx.drawImage(keyed, -iw / 2, -ih / 2, iw, ih);
       ctx.restore();
+      ctx.globalAlpha = 1;
     }
 
-    var vg = ctx.createRadialGradient(w / 2, h * 0.42, Math.min(w, h) * 0.22, w / 2, h / 2, Math.max(w, h) * 0.72);
+    var vg = ctx.createRadialGradient(w * 0.42, h * 0.42, Math.min(w, h) * 0.18, w * 0.5, h * 0.55, Math.max(w, h) * 0.75);
     vg.addColorStop(0, "rgba(0,0,0,0)");
-    vg.addColorStop(1, "rgba(4,7,10,0.6)");
+    vg.addColorStop(1, "rgba(4,7,10,0.72)");
     ctx.fillStyle = vg;
     ctx.fillRect(0, 0, w, h);
   }
