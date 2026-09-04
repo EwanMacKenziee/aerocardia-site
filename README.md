@@ -70,7 +70,7 @@ Real files pulled from `Downloads/AeroCardia/`:
 | `device-black-teal-2.png` | home "setup" | alt angle |
 | `device-566.png` | how-it-works scroll-rotate | silver/blue, black bg (feathers into dark) |
 | `device-black-copper-hero.png`, `device-green-gold.png`, `device-white-teal.png`, `device-white-yellow.png` | product + home colourway toggles | swappable bands |
-| `vo2-phases.jpg` | training section, blog card, idle strip | **7 MB / 6000 px — resize to ~1600 px before launch** |
+| `vo2-phases.jpg` | training section, blog card, numbered card 2 | **7 MB / 6000 px — resize to ~1600 px before launch** |
 | `proto-5914.jpg`, `oscar-1.jpg` | about page | prototype photography |
 
 ### Before launch — image hygiene
@@ -85,11 +85,14 @@ and consider WebP. `favicon.png` is 1500 px — generate a real 32×32 / 180×18
    The "Join the waitlist" buttons in every nav/CTA point to `waitlist.html`.
    *(Optional: add JotForm's `jotform-form-embed` auto-resize script if the form
    height changes a lot.)*
-2. **Stock photography** — drop `cyclists-bw.jpg` (the B&W motion-blur cyclists shot)
-   into `assets/img/`; it's already referenced by the first blog card and the idle
-   strip, with a `picsum.photos` fallback until the file exists. The remaining idle
-   strip / blog images are grayscale `picsum.photos` placeholders — replace with
-   curated running/cycling shots.
+2. **Photography** — the `picsum.photos` stock placeholders were pulled out of
+   `index.html` (numbered cards, blog highlights, idle strip) so nothing on the
+   live site reads as generic filler; those slots are empty gradient cards for
+   now. The idle strip section is commented out entirely (see the HTML comment
+   where it was). Once you have curated running/cycling shots, drop them in
+   `assets/img/`, swap them back into the `<div class="post__img">` /
+   `.ncard__media` slots, and restore the strip markup from git history
+   (`git log -- index.html`).
 3. **Blog** — cards link to `https://aerocardia.com/blog`. Point them at the real
    post URLs when the blog is migrated.
 4. **Colourways** — `product.html` "Style meets performance" and `index.html`
