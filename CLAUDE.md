@@ -1,0 +1,26 @@
+# House rules
+
+- AeroCardia is a general wellness company. ARO2 is pre-launch. "Coming soon" is allowed; only availability, pricing, or shipping claims are banned. Do not mention ARO2's accuracy or superiority, and make no ARO2 product claims.
+- Prohibited words/ideas: diagnose, detect, screen, treat, prevent, cure, patient, symptom, disease, clinical-grade, medical-grade. These rules apply to claims, not negations.
+- "Screen" meaning a display is allowed.
+- Approved standard disclaimer, which must appear on every post unchanged: "not a medical device and is not intended for use in the diagnosis, treatment, cure, mitigation, prevention, or monitoring of any disease or medical condition"
+- No heart-rhythm claims (arrhythmia, AFib, irregular heartbeat).
+- No mortality, longevity, or disease-risk claims, even if cited.
+- "Longevity" and "healthspan" may be used only as audience or topic labels, never as an outcome ARO2 or training data delivers.
+- No individual training or medical prescriptions.
+- Wearables "estimate" VO2max. Never call wearables wrong or inaccurate without citing a validation study.
+- Competitors (Garmin, Whoop, Apple, VO2 Master, PNOE): neutral and cited only.
+- Cite every physiology claim. Mark anything uncertain with [VERIFY].
+- Audience: data-driven endurance and recreational athletes who track a lot but struggle to act on it.
+- Voice: knowledgeable, plain-language, evidence-led, no hype. Define VO2 on first use.
+- Set a target keyword before drafting.
+- End each draft with a list of all [VERIFY] flags and every claim-to-source pairing. The claim-to-source list is required in drafts only, not the final version. All [VERIFY] tags must be resolved before a final version.
+- Never call ARO2 or any product "safe," "side-effect free," or "no known side effects." Present benefits and limitations together, not benefits alone.
+- No "unique"/"only" claims unless specifically and verifiably true (check any such claim already on the live site against this before reusing it in a post).
+- Don't escalate a general wellness/audience claim into a specific physiological benefit (e.g. "for athletes who care about heart health" is fine; "improves heart health" is not).
+- No exaggeration language: "powerful," "amazing," "fantastic," "essential," "game-changing." Say a reader "wants" or "may benefit from" something — never that they "need" ARO2 specifically.
+- No guarantees of results ("guaranteed," "always," "every time," "will improve your X").
+- No "natural"/"naturally" framing for how the device, training, or physiology "works."
+- Competitor comparisons must name the specific thing being compared and the conditions of use, and must not include an unsupported or unreasonable attack on a competitor — "neutral and cited" is the floor, not the whole rule.
+- Charts, stats, footnotes, and any testimonial/quote used in a post are claims too and follow the same rules as prose. A footnote or chart can't soften or rescue a headline/claim that overreaches.
+- "New"/"introducing" language is fine pre-launch. Once ARO2 ships, drop "new" after 12 months from first sale, and always say what specifically is new.
