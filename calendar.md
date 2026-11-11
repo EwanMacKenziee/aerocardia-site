@@ -10,10 +10,11 @@ Storyline: we collect more fitness data than ever, but does that data actually h
 - ICP pain: Too much data, not enough actionable insight.
 
 ### 2026-11-11 · When your watch says you're improving, should you believe it?
-- Status: planned
+- Status: STAGED (preview) — awaiting merge approval. Branch blog/smartwatch-vo2-max-accuracy in aerocardia-site-v2.
 - Brief: How fitness wearables generate estimates, why numbers fluctuate, and how to recognize when data may be misleading. Help readers tell real change from measurement noise. Neutral and cited on brands; no lab-vs-wearable verdict (save for 11-18).
 - ICP pain: Uncertainty about accuracy and reliability.
-- Keyword candidates: how accurate is garmin vo2 max · smartwatch vo2 max accuracy · how accurate are fitness trackers
+- Target keyword: smartwatch vo2 max accuracy (seo_title: "Smartwatch VO2 Max Accuracy: What the Research Really Shows")
+- Sources log: sources/smartwatch-vo2-max-accuracy-sources.md
 
 ### 2026-11-18 · What can a fitness test tell you that your smartwatch can't?
 - Status: planned
