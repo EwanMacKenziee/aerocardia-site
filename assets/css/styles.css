@@ -242,6 +242,17 @@ p { margin: 0 0 1em; }
 .card ul li { position: relative; padding-left: 20px; font-size: 14.5px; color: var(--text-dim); margin-bottom: 7px; }
 .card ul li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
+.team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px 20px; }
+@media (max-width: 900px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+.team-mini { text-align: center; }
+.team-mini img {
+  width: 76px; height: 76px; border-radius: 50%; object-fit: cover; margin: 0 auto 12px;
+  display: block; background: var(--bg-elev); border: 1px solid var(--line);
+}
+.team-mini h4 { font-size: 15px; margin: 0 0 2px; }
+.team-mini p { margin: 0; font-size: 13px; color: var(--text-mute); }
+
 /* ---------- Split feature rows ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .split--reverse .split__media { order: 2; }

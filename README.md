@@ -71,7 +71,8 @@ Real files pulled from `Downloads/AeroCardia/`:
 | `device-566.png` | how-it-works scroll-rotate | silver/blue, black bg (feathers into dark) |
 | `device-black-copper-hero.png`, `device-green-gold.png`, `device-white-teal.png`, `device-white-yellow.png` | product + home colourway toggles | swappable bands |
 | `vo2-phases.jpg` | training section, blog card, numbered card 2 | **7 MB / 6000 px — resize to ~1600 px before launch** |
-| `proto-5914.jpg`, `oscar-1.jpg` | about page | prototype photography |
+| `proto-5914.jpg` | about page | prototype photography |
+| `team/*.{jpg,jpeg,png,svg}` | about page | headshots for the team & interns grids; `placeholder-avatar.svg` covers anyone without a photo yet |
 
 ### Before launch — image hygiene
 All `device-*.png` renders are ~1920 px on a grey/black studio background and
