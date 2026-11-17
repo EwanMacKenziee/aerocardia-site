@@ -49,22 +49,41 @@
   var flags = document.querySelectorAll(".flag");
   var shell = document.querySelector("[data-uci-shell]");
   if (flags.length && shell) {
+    var label = document.querySelector("[data-uci-label]");
+    var cwEl = document.querySelector("[data-uci-cw]");
+    var img = shell.querySelector("[data-uci-img]");
+
+    // Country names localize via a data-country-fr attribute; colourway
+    // names (Copper, Signal Teal, …) are treated as product names and are
+    // the same in both languages, so data-cw has no -fr counterpart.
+    var localized = function (f, attr) {
+      var isFr = document.documentElement.lang === "fr";
+      return (isFr && f.getAttribute(attr + "-fr")) || f.getAttribute(attr) || "";
+    };
+
+    var render = function (f) {
+      var c = f.getAttribute("data-accent");
+      if (c) shell.style.setProperty("--shell-accent", c);
+      if (label) label.textContent = localized(f, "data-country") || localized(f, "data-cw");
+      if (cwEl && f.getAttribute("data-cw")) cwEl.textContent = localized(f, "data-cw");
+      if (img) {
+        var src = f.getAttribute("data-img");
+        if (src) img.src = src;
+      }
+    };
+
     flags.forEach(function (f) {
       f.addEventListener("click", function () {
         flags.forEach(function (x) { x.classList.remove("is-active"); });
         f.classList.add("is-active");
-        var c = f.getAttribute("data-accent");
-        if (c) shell.style.setProperty("--shell-accent", c);
-        var label = document.querySelector("[data-uci-label]");
-        if (label) label.textContent = f.getAttribute("data-country") || f.getAttribute("data-cw") || "";
-        var cw = document.querySelector("[data-uci-cw]");
-        if (cw && f.getAttribute("data-cw")) cw.textContent = f.getAttribute("data-cw");
-        var img = shell.querySelector("[data-uci-img]");
-        if (img) {
-          var src = f.getAttribute("data-img");
-          if (src) img.src = src;
-        }
+        render(f);
       });
+    });
+
+    var active = document.querySelector(".flag.is-active") || flags[0];
+    render(active);
+    document.addEventListener("ac:langchange", function () {
+      render(document.querySelector(".flag.is-active") || flags[0]);
     });
   }
 

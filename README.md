@@ -13,6 +13,53 @@ Static HTML/CSS/JS. No build step, no dependencies.
 | `about.html` | About us — story, mission, approach, testing, backers, contact |
 | `waitlist.html` | Join the waitlist — CTA, member perks, FAQ |
 
+## French toggle (EN/FR)
+
+Every page carries a FR/EN pill in the topbar (`[data-lang-toggle]`, styled
+`.lang-toggle`) that swaps visible text client-side — no reload, no `/fr/`
+URLs. `assets/js/i18n.js` is the whole engine; it's included on every page
+and runs once on `DOMContentLoaded`.
+
+**How it works:** any element with a `data-fr="<french html>"` attribute
+gets its `innerHTML` swapped between the authored English and that French
+string when the toggle fires. The first swap snapshots the live English
+into `data-en` so toggling back is exact, not a re-translation. For
+attributes (an `alt`, `aria-label`, or the description meta's `content`),
+list the attribute names in `data-fr-attrs="alt aria-label"` and give each
+one a `data-fr-attr-<name>` value; `data-en-attr-<name>` is where the
+original gets snapshotted the same way. The chosen language persists in
+`localStorage` (`ac-lang`) and defaults to the browser's language on first
+visit. `document` fires an `ac:langchange` event after every swap — the
+UCI colourway widget's label (`assets/js/main.js`) listens for it so a
+dynamically-set country name (`data-country-fr` on `.flag` buttons; the
+Belgium/Ireland/etc. flags on `index.html`) stays in the right language
+even though it wasn't re-clicked.
+
+**Translating new content** — when you add a page, section or blog
+highlight to this repo:
+1. Add `data-fr="…"` to every element that holds user-facing text (a
+   heading, paragraph, list item, link, button). Nested tags inside the
+   English content (a `<br>`, `<em>`, `<span class="arrow">`) need to be
+   repeated inside the `data-fr` string too, since it replaces the whole
+   `innerHTML` — use single quotes for any nested attribute (`<span
+   class='arrow'>`) since the outer `data-fr="…"` is double-quoted.
+2. Add `data-fr-attrs="…"` + `data-fr-attr-<name>="…"` for any `alt`,
+   `aria-label`, meta `content`, etc.
+3. Proper nouns, email addresses, numbers/units, and colourway/brand names
+   (Copper, Signal Teal, …) are left untranslated on purpose — don't force
+   a `data-fr` onto those.
+4. Run `node scripts/check-i18n.mjs` before publishing. It's a heuristic
+   line-scan, not a real parser — it flags any leaf element (plain text, no
+   nested tags) with no `data-fr`, which includes the proper nouns from
+   step 3, so review its output rather than treating every line as a bug.
+   It won't catch a missed translation on an element whose text mixes with
+   nested markup (those need a human read-through).
+5. French copy follows the same CLAUDE.md house rules as English —
+   banned words/claims, the disclaimer, no stronger claims than the
+   English version. Translate, don't rewrite: the French text should carry
+   the same meaning and the same strength of claim as the English next to
+   it, not a punchier or softer version.
+
 ## Preview / deploy
 
 Open `index.html` directly in a browser to preview — every script is a plain

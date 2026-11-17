@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>How it works — AeroCardia</title>
-<meta name="description" content="How AeroCardia turns breath into real-time VO2, ventilation and effort data — strap in, warm up, train with your own numbers." />
+<title data-fr="Comment ça marche — AeroCardia">How it works — AeroCardia</title>
+<meta name="description" content="How AeroCardia turns breath into real-time VO2, ventilation and effort data — strap in, warm up, train with your own numbers." data-fr-attrs="content" data-fr-attr-content="Comment AeroCardia transforme votre respiration en données de VO2, de ventilation et d'effort en temps réel — installez-vous, échauffez-vous, entraînez-vous avec vos propres chiffres." />
 <link rel="icon" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,33 +18,36 @@
   <div class="topbar__left">
     <button class="menu-open" id="menu-open" aria-expanded="false" aria-controls="menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-      <span class="menu-open__label">Menu</span>
+      <span class="menu-open__label" data-fr="Menu">Menu</span>
     </button>
-    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home">
+    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home" data-fr-attrs="aria-label" data-fr-attr-aria-label="Accueil AeroCardia">
       <img src="assets/img/favicon.png" alt="" width="24" height="24" />AeroCardia
     </a>
   </div>
-  <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html">Join the waitlist</a>
+  <div class="topbar__right">
+    <button type="button" class="lang-toggle" data-lang-toggle aria-pressed="false">FR</button>
+    <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a>
+  </div>
 </header>
 
 <div class="menu" id="menu" aria-hidden="true">
   <div class="menu__backdrop" data-menu-close></div>
-  <nav class="menu__panel" aria-label="Main menu">
+  <nav class="menu__panel" aria-label="Main menu" data-fr-attrs="aria-label" data-fr-attr-aria-label="Menu principal">
     <button class="menu__close" id="menu-close" data-menu-close>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      Close
+      <span data-fr="Fermer">Close</span>
     </button>
     <div class="menu__nav">
-      <a class="menu__link" href="index.html"><span class="menu__linkText">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="product.html"><span class="menu__linkText">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="about.html"><span class="menu__linkText">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="index.html#blog"><span class="menu__linkText">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html"><span class="menu__linkText" data-fr="Accueil">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="product.html"><span class="menu__linkText" data-fr="Produit">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText" data-fr="Comment ça marche">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="about.html"><span class="menu__linkText" data-fr="À propos">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html#blog"><span class="menu__linkText" data-fr="Blogue">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
     <div class="menu__foot">
-      <span class="menu__footLabel">Get in touch</span>
+      <span class="menu__footLabel" data-fr="Nous contacter">Get in touch</span>
       <a class="menu__mail" href="mailto:info@aerocardia.com">info@aerocardia.com</a>
-      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html">Join the waitlist</a></div>
+      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a></div>
     </div>
   </nav>
 </div>
@@ -53,9 +56,9 @@
 
 <section class="page-hero">
   <div class="wrap narrow reveal in">
-    <span class="eyebrow">How it works</span>
-    <h1>Always know your power.</h1>
-    <p class="lede">The lab version of this test involves a full face mask, a cart of gas analysers and a technician. AeroCardia packs the sensing into a light cup you breathe through — so you get the numbers every session, not once a year.</p>
+    <span class="eyebrow" data-fr="Comment ça marche">How it works</span>
+    <h1 data-fr="Connaissez toujours votre puissance.">Always know your power.</h1>
+    <p class="lede" data-fr="La version en laboratoire de ce test implique un masque facial complet, un chariot d'analyseurs de gaz et un technicien. AeroCardia regroupe la détection dans un cache léger à travers lequel vous respirez — pour obtenir les chiffres à chaque séance, pas une fois par année.">The lab version of this test involves a full face mask, a cart of gas analysers and a technician. AeroCardia packs the sensing into a light cup you breathe through — so you get the numbers every session, not once a year.</p>
   </div>
 </section>
 
@@ -66,15 +69,15 @@
       <div class="reveal" style="padding:0">
         <div class="stage stage--tall">
           <div class="stage__frames">
-            <img data-scrub-target src="assets/img/device-black-teal-2.png" alt="AeroCardia sensor pod" style="transition:transform .12s linear" />
+            <img data-scrub-target src="assets/img/device-black-teal-2.png" alt="AeroCardia sensor pod" style="transition:transform .12s linear" data-fr-attrs="alt" data-fr-attr-alt="Module capteur AeroCardia" />
           </div>
-          <span class="stage__badge">Sensor pod</span>
+          <span class="stage__badge" data-fr="Module capteur">Sensor pod</span>
         </div>
       </div>
       <div class="reveal" data-d="1">
-        <h2>Double-tap for instant status.</h2>
-        <p class="lede">No need to check your phone or watch. A double-tap on the pod confirms battery and connection before you head out — the same gesture wakes it for a session.</p>
-        <p class="muted" style="font-size:14px">Scroll to rotate the pod.</p>
+        <h2 data-fr="Un double tapotement pour un état instantané.">Double-tap for instant status.</h2>
+        <p class="lede" data-fr="Pas besoin de vérifier votre téléphone ou votre montre. Un double tapotement sur le module confirme la batterie et la connexion avant de partir — le même geste le réveille pour une séance.">No need to check your phone or watch. A double-tap on the pod confirms battery and connection before you head out — the same gesture wakes it for a session.</p>
+        <p class="muted" style="font-size:14px" data-fr="Défilez pour faire pivoter le module.">Scroll to rotate the pod.</p>
       </div>
     </div>
   </div>
@@ -83,13 +86,13 @@
 <!-- THE SENSING -->
 <section class="section">
   <div class="wrap">
-    <div class="narrow reveal"><span class="eyebrow">The sensing</span><h2>Every breath, measured.</h2>
-      <p class="lede">AeroCardia reads your breathing with a Sensirion airflow sensor. Patent-pending signal processing turns that raw airflow stream into the same gas-exchange metrics a metabolic cart reports.</p>
+    <div class="narrow reveal"><span class="eyebrow" data-fr="La détection">The sensing</span><h2 data-fr="Chaque respiration, mesurée.">Every breath, measured.</h2>
+      <p class="lede" data-fr="AeroCardia lit votre respiration grâce à un capteur de débit d'air Sensirion. Un traitement du signal en instance de brevet transforme ce flux d'air brut dans les mêmes mesures d'échanges gazeux que rapporte un chariot métabolique.">AeroCardia reads your breathing with a Sensirion airflow sensor. Patent-pending signal processing turns that raw airflow stream into the same gas-exchange metrics a metabolic cart reports.</p>
     </div>
     <div class="cards cards--3" style="margin-top:48px">
-      <div class="card reveal" data-d="1"><div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h12M3 18h15" stroke-linecap="round"/></svg></div><h3>Airflow sensing</h3><p>A Sensirion airflow sensor reads every breath in real time — the same measurement principle used in clinical respiratory equipment.</p></div>
-      <div class="card reveal" data-d="2"><div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12c4 0 4-6 8-6s4 12 8 12" stroke-linecap="round"/></svg></div><h3>Ventilation</h3><p>Breathing rate and volume, sampled breath by breath to find your ventilatory thresholds.</p></div>
-      <div class="card reveal" data-d="3"><div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 13l2 2 4-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>AI-enabled analytics</h3><p>Models trained against reference metabolic testing estimate VO2, VO2 max and RER, then learn your patterns over time.</p></div>
+      <div class="card reveal" data-d="1"><div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h12M3 18h15" stroke-linecap="round"/></svg></div><h3 data-fr="Détection du débit d'air">Airflow sensing</h3><p data-fr="Un capteur de débit d'air Sensirion lit chaque respiration en temps réel — le même principe de mesure utilisé dans l'équipement respiratoire clinique.">A Sensirion airflow sensor reads every breath in real time — the same measurement principle used in clinical respiratory equipment.</p></div>
+      <div class="card reveal" data-d="2"><div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12c4 0 4-6 8-6s4 12 8 12" stroke-linecap="round"/></svg></div><h3 data-fr="Ventilation">Ventilation</h3><p data-fr="Fréquence et volume respiratoires, échantillonnés respiration par respiration pour trouver vos seuils ventilatoires.">Breathing rate and volume, sampled breath by breath to find your ventilatory thresholds.</p></div>
+      <div class="card reveal" data-d="3"><div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 13l2 2 4-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-fr="Analytique assistée par IA">AI-enabled analytics</h3><p data-fr="Des modèles entraînés à partir de tests métaboliques de référence estiment le VO2, le VO2 max et le RER, puis apprennent vos tendances au fil du temps.">Models trained against reference metabolic testing estimate VO2, VO2 max and RER, then learn your patterns over time.</p></div>
     </div>
   </div>
 </section>
@@ -97,12 +100,12 @@
 <!-- STEPS -->
 <section class="section" style="background:var(--bg-elev);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="reveal"><span class="eyebrow">In a session</span><h2>Four steps, then just train.</h2></div>
+    <div class="reveal"><span class="eyebrow" data-fr="Pendant une séance">In a session</span><h2 data-fr="Quatre étapes, puis entraînez-vous.">Four steps, then just train.</h2></div>
     <div class="steps" style="margin-top:44px">
-      <div class="step reveal" data-d="1"><div class="step__n">01</div><h3>Strap in</h3><p>Settle the cup over your nose and mouth, snug the strap, and the pod wakes automatically. One-time pairing with your watch or head unit.</p></div>
-      <div class="step reveal" data-d="2"><div class="step__n">02</div><h3>Warm up</h3><p>A few easy minutes let the sensor settle and baseline your breathing. No calibration screen to sit through.</p></div>
-      <div class="step reveal" data-d="3"><div class="step__n">03</div><h3>Data streams live</h3><p>VO2, ventilation and RER appear on your display and record to your session.</p></div>
-      <div class="step reveal"><div class="step__n">04</div><h3>Review the trend</h3><p>After the session, the app shows where your thresholds sat today and how your VO2 max is tracking.</p></div>
+      <div class="step reveal" data-d="1"><div class="step__n">01</div><h3 data-fr="Attachez-le">Strap in</h3><p data-fr="Placez le cache sur votre nez et votre bouche, ajustez la sangle, et le module se réveille automatiquement. Jumelage unique avec votre montre ou compteur.">Settle the cup over your nose and mouth, snug the strap, and the pod wakes automatically. One-time pairing with your watch or head unit.</p></div>
+      <div class="step reveal" data-d="2"><div class="step__n">02</div><h3 data-fr="Échauffez-vous">Warm up</h3><p data-fr="Quelques minutes faciles permettent au capteur de se stabiliser et d'établir une base de votre respiration. Aucun écran de calibration à attendre.">A few easy minutes let the sensor settle and baseline your breathing. No calibration screen to sit through.</p></div>
+      <div class="step reveal" data-d="3"><div class="step__n">03</div><h3 data-fr="Les données défilent en direct">Data streams live</h3><p data-fr="Le VO2, la ventilation et le RER apparaissent sur votre écran et s'enregistrent dans votre séance.">VO2, ventilation and RER appear on your display and record to your session.</p></div>
+      <div class="step reveal"><div class="step__n">04</div><h3 data-fr="Consultez la tendance">Review the trend</h3><p data-fr="Après la séance, l'appli montre où se situaient vos seuils aujourd'hui et comment évolue votre VO2 max.">After the session, the app shows where your thresholds sat today and how your VO2 max is tracking.</p></div>
     </div>
   </div>
 </section>
@@ -112,20 +115,20 @@
   <div class="wrap">
     <div class="split">
       <div class="reveal">
-        <span class="eyebrow">Training</span>
-        <h2>Personalised training. Powered by the best data.</h2>
-        <p class="lede">Real gas-exchange data means your zones stop being an estimate. Every workout can be checked against what your body actually did — and the next one adjusts.</p>
+        <span class="eyebrow" data-fr="Entraînement">Training</span>
+        <h2 data-fr="Un entraînement personnalisé. Propulsé par les meilleures données.">Personalised training. Powered by the best data.</h2>
+        <p class="lede" data-fr="De véritables données d'échanges gazeux signifient que vos zones cessent d'être une estimation. Chaque séance peut être vérifiée par rapport à ce que votre corps a réellement fait — et la suivante s'ajuste.">Real gas-exchange data means your zones stop being an estimate. Every workout can be checked against what your body actually did — and the next one adjusts.</p>
         <ul>
-          <li>Zones anchored to measured ventilatory thresholds</li>
-          <li>Session review: aerobic as planned, or drifted?</li>
-          <li>Readiness cues from recovery between hard efforts</li>
-          <li>VO2 max tracked as a long-term trend, not a one-off</li>
+          <li data-fr="Des zones ancrées à des seuils ventilatoires mesurés">Zones anchored to measured ventilatory thresholds</li>
+          <li data-fr="Bilan de séance : aérobie comme prévu, ou dérive&nbsp;?">Session review: aerobic as planned, or drifted?</li>
+          <li data-fr="Des repères de disponibilité à partir de la récupération entre les efforts intenses">Readiness cues from recovery between hard efforts</li>
+          <li data-fr="VO2 max suivi comme une tendance à long terme, pas un chiffre isolé">VO2 max tracked as a long-term trend, not a one-off</li>
         </ul>
       </div>
       <div class="split__media reveal" data-d="1">
         <div style="padding:26px;width:100%">
           <div style="background:var(--bg-elev-2);border:1px solid var(--line);border-radius:14px;padding:20px">
-            <div style="font-size:13px;color:var(--text-mute);margin-bottom:12px">12-week trend &middot; VO2 max</div>
+            <div style="font-size:13px;color:var(--text-mute);margin-bottom:12px" data-fr="Tendance sur 12 semaines &middot; VO2 max">12-week trend &middot; VO2 max</div>
             <div style="display:flex;gap:5px;align-items:flex-end;height:110px">
               <span style="flex:1;background:var(--line-strong);height:52%"></span>
               <span style="flex:1;background:var(--line-strong);height:55%"></span>
@@ -151,17 +154,17 @@
 <!-- SYNC -->
 <section class="section" style="background:var(--bg-elev);border-top:1px solid var(--line)">
   <div class="wrap narrow center reveal" style="margin-inline:auto">
-    <span class="eyebrow">Your ecosystem</span>
-    <h2>Syncs with what you already use.</h2>
-    <p class="lede" style="margin-inline:auto">Bluetooth and ANT+ mean AeroCardia shows up as a sensor on your Garmin, Wahoo, Apple Watch or Zwift. Sessions also land in the AeroCardia app for trend analysis, and export to the platforms you train on.</p>
+    <span class="eyebrow" data-fr="Votre écosystème">Your ecosystem</span>
+    <h2 data-fr="Se synchronise avec ce que vous utilisez déjà.">Syncs with what you already use.</h2>
+    <p class="lede" style="margin-inline:auto" data-fr="Le Bluetooth et l'ANT+ font qu'AeroCardia apparaît comme capteur sur votre Garmin, Wahoo, Apple Watch ou Zwift. Les séances arrivent aussi dans l'appli AeroCardia pour l'analyse de tendance, et s'exportent vers les plateformes sur lesquelles vous vous entraînez.">Bluetooth and ANT+ mean AeroCardia shows up as a sensor on your Garmin, Wahoo, Apple Watch or Zwift. Sessions also land in the AeroCardia app for trend analysis, and export to the platforms you train on.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap"><div class="cta-band reveal">
-    <h2>Train with your own numbers.</h2>
-    <p>Join the waitlist for early access to AeroCardia.</p>
-    <div style="margin-top:26px"><a class="btn btn--primary btn--lg" href="waitlist.html">Join the waitlist <span class="arrow">&rarr;</span></a></div>
+    <h2 data-fr="Entraînez-vous avec vos propres chiffres.">Train with your own numbers.</h2>
+    <p data-fr="Rejoignez la liste d'attente pour un accès anticipé à AeroCardia.">Join the waitlist for early access to AeroCardia.</p>
+    <div style="margin-top:26px"><a class="btn btn--primary btn--lg" href="waitlist.html" data-fr="Rejoindre la liste d'attente <span class='arrow'>&rarr;</span>">Join the waitlist <span class="arrow">&rarr;</span></a></div>
   </div></div>
 </section>
 
@@ -172,19 +175,20 @@
     <div class="footer__grid">
       <div>
         <a class="brand" href="index.html" style="margin-bottom:14px"><svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" stroke="#2E9BFF" stroke-width="2"/><path d="M4 17.5h6l2.5-6 4 11 3-8 2 3h6.5" stroke="#57B4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>AeroCardia</a>
-        <p class="muted" style="font-size:14px;max-width:32ch">VO2 max and cardiopulmonary data, anywhere.</p>
+        <p class="muted" style="font-size:14px;max-width:32ch" data-fr="Les données de VO2 max et cardiopulmonaires, partout.">VO2 max and cardiopulmonary data, anywhere.</p>
       </div>
-      <div><h4>Explore</h4><a href="product.html">Product</a><a href="how-it-works.html">How it works</a><a href="about.html">About us</a><a href="https://aerocardia.com/blog">Blog</a></div>
-      <div><h4>Get started</h4><a href="waitlist.html">Join the waitlist</a><a href="mailto:info@aerocardia.com">Contact the team</a></div>
-      <div><h4>Connect</h4><a href="https://www.linkedin.com/company/aerocardia/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/aerocardia" target="_blank" rel="noopener">Instagram</a><a href="mailto:info@aerocardia.com">info@aerocardia.com</a></div>
+      <div><h4 data-fr="Explorer">Explore</h4><a href="product.html" data-fr="Produit">Product</a><a href="how-it-works.html" data-fr="Comment ça marche">How it works</a><a href="about.html" data-fr="À propos">About us</a><a href="https://aerocardia.com/blog" data-fr="Blogue">Blog</a></div>
+      <div><h4 data-fr="Commencer">Get started</h4><a href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a><a href="mailto:info@aerocardia.com" data-fr="Contacter l'équipe">Contact the team</a></div>
+      <div><h4 data-fr="Nous suivre">Connect</h4><a href="https://www.linkedin.com/company/aerocardia/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/aerocardia" target="_blank" rel="noopener">Instagram</a><a href="mailto:info@aerocardia.com">info@aerocardia.com</a></div>
     </div>
     <div class="footer__bottom">
       <span>&copy; <span data-year>2026</span> AeroCardia. Westmount, Quebec, Canada.</span>
-      <span class="footer__disc">AeroCardia is intended exclusively for general wellness and fitness purposes. It is not a medical device and is not intended to diagnose, treat, cure or prevent any disease.</span>
+      <span class="footer__disc" data-fr="AeroCardia est destiné exclusivement à des fins de bien-être général et de mise en forme. Il n'est pas un dispositif médical et n'est pas destiné à être utilisé pour le diagnostic, le traitement, la guérison, l'atténuation, la prévention ou la surveillance d'une maladie ou d'une condition médicale.">AeroCardia is intended exclusively for general wellness and fitness purposes. It is not a medical device and is not intended for use in the diagnosis, treatment, cure, mitigation, prevention, or monitoring of any disease or medical condition.</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

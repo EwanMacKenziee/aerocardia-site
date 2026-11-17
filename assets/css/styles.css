@@ -443,9 +443,21 @@ p { margin: 0 0 1em; }
 }
 .menu-open:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--text-mute); }
 .menu-open svg { flex: none; }
+.topbar__right { display: flex; align-items: center; gap: 10px; }
+.lang-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 42px;
+  background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  padding: 8px 14px; color: var(--text); font: inherit; font-size: 13px; font-weight: 700; letter-spacing: .02em;
+  transition: background .18s, border-color .18s; flex: none;
+}
+.lang-toggle:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--text-mute); }
+.menu__lang { margin-top: 18px; }
 .topbar__cta { box-shadow: 0 8px 30px rgba(41, 176, 166, 0.28); flex: none; }
 @media (max-width: 560px) {
   .topbar { padding: 12px 14px; }
+  .lang-toggle { padding: 9px 11px; }
   .topbar__brand { display: none; }
   .menu-open__label { display: none; }
   .menu-open { padding: 9px; border-radius: 12px; }

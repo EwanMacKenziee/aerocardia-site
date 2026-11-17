@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About — AeroCardia</title>
-<meta name="description" content="AeroCardia was founded by Matthew Behr, PEng and Abhinav Sharma, MD, PhD to put lab-grade VO2 and breath data in the hands of everyday athletes." />
+<title data-fr="À propos — AeroCardia">About — AeroCardia</title>
+<meta name="description" content="AeroCardia was founded by Matthew Behr, PEng and Abhinav Sharma, MD, PhD to put lab-grade VO2 and breath data in the hands of everyday athletes." data-fr-attrs="content" data-fr-attr-content="AeroCardia a été fondée par Matthew Behr, PEng, et Abhinav Sharma, MD, PhD, pour mettre des données de VO2 et de respiration dignes d'un laboratoire entre les mains des athlètes de tous les jours." />
 <link rel="icon" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,33 +18,36 @@
   <div class="topbar__left">
     <button class="menu-open" id="menu-open" aria-expanded="false" aria-controls="menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-      <span class="menu-open__label">Menu</span>
+      <span class="menu-open__label" data-fr="Menu">Menu</span>
     </button>
-    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home">
+    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home" data-fr-attrs="aria-label" data-fr-attr-aria-label="Accueil AeroCardia">
       <img src="assets/img/favicon.png" alt="" width="24" height="24" />AeroCardia
     </a>
   </div>
-  <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html">Join the waitlist</a>
+  <div class="topbar__right">
+    <button type="button" class="lang-toggle" data-lang-toggle aria-pressed="false">FR</button>
+    <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a>
+  </div>
 </header>
 
 <div class="menu" id="menu" aria-hidden="true">
   <div class="menu__backdrop" data-menu-close></div>
-  <nav class="menu__panel" aria-label="Main menu">
+  <nav class="menu__panel" aria-label="Main menu" data-fr-attrs="aria-label" data-fr-attr-aria-label="Menu principal">
     <button class="menu__close" id="menu-close" data-menu-close>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      Close
+      <span data-fr="Fermer">Close</span>
     </button>
     <div class="menu__nav">
-      <a class="menu__link" href="index.html"><span class="menu__linkText">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="product.html"><span class="menu__linkText">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="about.html"><span class="menu__linkText">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="index.html#blog"><span class="menu__linkText">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html"><span class="menu__linkText" data-fr="Accueil">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="product.html"><span class="menu__linkText" data-fr="Produit">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText" data-fr="Comment ça marche">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="about.html"><span class="menu__linkText" data-fr="À propos">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html#blog"><span class="menu__linkText" data-fr="Blogue">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
     <div class="menu__foot">
-      <span class="menu__footLabel">Get in touch</span>
+      <span class="menu__footLabel" data-fr="Nous contacter">Get in touch</span>
       <a class="menu__mail" href="mailto:info@aerocardia.com">info@aerocardia.com</a>
-      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html">Join the waitlist</a></div>
+      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a></div>
     </div>
   </nav>
 </div>
@@ -53,9 +56,9 @@
 
 <section class="page-hero">
   <div class="wrap narrow reveal in">
-    <span class="eyebrow">About us</span>
-    <h1>Lab-grade data, out of the lab.</h1>
-    <p class="lede">A metabolic cart can tell you almost everything about your aerobic engine. The problem is that almost no one can get to one. AeroCardia exists to close that gap.</p>
+    <span class="eyebrow" data-fr="À propos de nous">About us</span>
+    <h1 data-fr="Des données dignes d'un laboratoire, hors du laboratoire.">Lab-grade data, out of the lab.</h1>
+    <p class="lede" data-fr="Un chariot métabolique peut presque tout vous dire sur votre moteur aérobie. Le problème, c'est que presque personne n'y a accès. AeroCardia existe pour combler cet écart.">A metabolic cart can tell you almost everything about your aerobic engine. The problem is that almost no one can get to one. AeroCardia exists to close that gap.</p>
   </div>
 </section>
 
@@ -64,13 +67,13 @@
   <div class="wrap">
     <div class="split">
       <div class="reveal">
-        <span class="eyebrow">The story</span>
-        <h2>Started by Matthew Behr and Dr. Abhinav Sharma.</h2>
-        <p>AeroCardia was founded by Matthew Behr, P.Eng, a McGill-educated engineer, and Dr. Abhinav Sharma, MD, PhD, a practicing cardiologist. They kept seeing the same gap from opposite sides: measuring heart and lung function outside of a clinic was extremely difficult, and the measurements that best describe cardiorespiratory fitness — oxygen uptake, ventilation, gas exchange — stayed locked behind hospital and university equipment, including for patients who most needed to be watched right after they'd already been discharged.</p>
-        <p>Athletes were making training decisions on heart rate and feel. Clinicians were watching a metric that predicts longevity go unmeasured in almost everyone. So Matthew and Abhinav set out to build a sensor small enough to wear on a run, accurate enough to trust, and simple enough that you would actually use it — to empower both patients and everyday people in monitoring their heart and lung function and living their best life.</p>
+        <span class="eyebrow" data-fr="L'histoire">The story</span>
+        <h2 data-fr="Fondée par Matthew Behr et le Dr Abhinav Sharma.">Started by Matthew Behr and Dr. Abhinav Sharma.</h2>
+        <p data-fr="AeroCardia a été fondée par Matthew Behr, PEng, un ingénieur formé à McGill, et le Dr Abhinav Sharma, MD, PhD, cardiologue en exercice. Ils voyaient tous deux le même écart, chacun de son côté&nbsp;: mesurer la fonction cardiaque et pulmonaire en dehors d'une clinique était extrêmement difficile, et les mesures qui décrivent le mieux la capacité cardiorespiratoire — la consommation d'oxygène, la ventilation, les échanges gazeux — restaient enfermées derrière l'équipement des hôpitaux et des universités, y compris pour les gens qui avaient le plus besoin d'être suivis juste après leur sortie de l'hôpital.">AeroCardia was founded by Matthew Behr, P.Eng, a McGill-educated engineer, and Dr. Abhinav Sharma, MD, PhD, a practicing cardiologist. They kept seeing the same gap from opposite sides: measuring heart and lung function outside of a clinic was extremely difficult, and the measurements that best describe cardiorespiratory fitness — oxygen uptake, ventilation, gas exchange — stayed locked behind hospital and university equipment, including for people who most needed to be watched right after being discharged from hospital care.</p>
+        <p data-fr="Les athlètes prenaient leurs décisions d'entraînement à partir de la fréquence cardiaque et du ressenti. Les cliniciens voyaient une mesure de la capacité cardiorespiratoire rester non mesurée chez presque tout le monde en dehors d'un laboratoire. Matthew et Abhinav ont donc entrepris de construire un capteur assez petit pour être porté en course, assez précis pour qu'on lui fasse confiance, et assez simple pour qu'on l'utilise réellement — pour aider les gens, au quotidien, à suivre leur fonction cardiaque et pulmonaire et à s'entraîner avec de vrais chiffres.">Athletes were making training decisions on heart rate and feel. Clinicians were watching a measure of cardiorespiratory fitness go unmeasured in almost everyone outside of a lab. So Matthew and Abhinav set out to build a sensor small enough to wear on a run, accurate enough to trust, and simple enough that you would actually use it — to help everyday people monitor their heart and lung function and train with real numbers.</p>
       </div>
       <div class="split__media reveal" data-d="1" style="padding:0;border:0;background:none">
-        <img src="assets/img/proto-5914.jpg" alt="Early AeroCardia prototype worn during testing" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" />
+        <img src="assets/img/proto-5914.jpg" alt="Early AeroCardia prototype worn during testing" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" data-fr-attrs="alt" data-fr-attr-alt="Premier prototype AeroCardia porté lors des essais" />
       </div>
     </div>
   </div>
@@ -79,22 +82,22 @@
 <!-- FOUNDERS -->
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="reveal"><span class="eyebrow">Our team</span><h2>Built by people who use it.</h2></div>
+    <div class="reveal"><span class="eyebrow" data-fr="Notre équipe">Our team</span><h2 data-fr="Conçu par des gens qui l'utilisent.">Built by people who use it.</h2></div>
     <div class="cards cards--2" style="margin-top:36px">
       <div class="card reveal" data-d="1" style="display:flex;gap:18px;align-items:flex-start">
         <img src="assets/img/team/matthew-behr.jpg" alt="Matthew Behr" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none" />
         <div>
           <h3 style="margin-bottom:2px">Matthew Behr, PEng</h3>
-          <p class="muted" style="font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px">Chief Executive Officer</p>
-          <p style="margin:0">A McGill-educated engineer and ultramarathon runner. Matthew has spent his career bringing ambitious health technology to market, and is building AeroCardia to put the numbers elite athletes chase within reach of everyday runners and riders.</p>
+          <p class="muted" style="font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px" data-fr="Chef de la direction">Chief Executive Officer</p>
+          <p style="margin:0" data-fr="Un ingénieur formé à McGill et coureur d'ultramarathon. Matthew a consacré sa carrière à mettre sur le marché des technologies de santé ambitieuses, et bâtit AeroCardia pour mettre à la portée des coureurs et cyclistes de tous les jours les chiffres que visent les athlètes d'élite.">A McGill-educated engineer and ultramarathon runner. Matthew has spent his career bringing ambitious health technology to market, and is building AeroCardia to put the numbers elite athletes chase within reach of everyday runners and riders.</p>
         </div>
       </div>
       <div class="card reveal" data-d="2" style="display:flex;gap:18px;align-items:flex-start">
         <img src="assets/img/team/abhinav-sharma.jpg" alt="Abhinav Sharma" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none" />
         <div>
           <h3 style="margin-bottom:2px">Abhinav Sharma, MD, PhD</h3>
-          <p class="muted" style="font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px">Chief Medical Officer</p>
-          <p style="margin:0">An award-winning cardiologist and researcher. Abhinav brings the same scientific rigor from his research career to a device built for daily training.</p>
+          <p class="muted" style="font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px" data-fr="Chef de la direction médicale">Chief Medical Officer</p>
+          <p style="margin:0" data-fr="Un cardiologue et chercheur primé. Abhinav apporte la même rigueur scientifique de sa carrière de recherche à un appareil conçu pour l'entraînement quotidien.">An award-winning cardiologist and researcher. Abhinav brings the same scientific rigor from his research career to a device built for daily training.</p>
         </div>
       </div>
     </div>
@@ -115,10 +118,10 @@
 <!-- INTERNS -->
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="reveal"><span class="eyebrow">Interns</span><h2>Helping build what's next.</h2></div>
+    <div class="reveal"><span class="eyebrow" data-fr="Stagiaires">Interns</span><h2 data-fr="Contribuent à bâtir la suite.">Helping build what's next.</h2></div>
     <div class="team-grid reveal" data-d="1" style="margin-top:36px;grid-template-columns:repeat(5,1fr)">
-      <div class="team-mini"><img src="assets/img/team/alexandra-desmarais-couture.png" alt="Alexandra Desmarais-Couture" /><h4>Alexandra Desmarais-Couture</h4><p>Marketing Intern</p></div>
-      <div class="team-mini"><img src="assets/img/team/placeholder-avatar.svg" alt="Ginna Alhadad" /><h4>Ginna Alhadad</h4><p>Engineer Intern</p></div>
+      <div class="team-mini"><img src="assets/img/team/alexandra-desmarais-couture.png" alt="Alexandra Desmarais-Couture" /><h4>Alexandra Desmarais-Couture</h4><p data-fr="Stagiaire en marketing">Marketing Intern</p></div>
+      <div class="team-mini"><img src="assets/img/team/placeholder-avatar.svg" alt="Ginna Alhadad" /><h4>Ginna Alhadad</h4><p data-fr="Stagiaire en ingénierie">Engineer Intern</p></div>
     </div>
   </div>
 </section>
@@ -126,20 +129,20 @@
 <!-- MISSION -->
 <section class="section" style="background:var(--bg-elev);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap narrow center reveal" style="margin-inline:auto">
-    <span class="eyebrow" style="justify-content:center">Why we're building this</span>
-    <h2>Fitness you can measure is fitness you can improve.</h2>
-    <p class="lede" style="margin-inline:auto">VO2 max is one of the strongest predictors of how long and how well people live — and one of the few that responds quickly to training. Our goal is simple: make it a number you can watch move, season after season, without booking a lab.</p>
+    <span class="eyebrow" style="justify-content:center" data-fr="Pourquoi nous construisons ceci">Why we're building this</span>
+    <h2 data-fr="Une forme physique qu'on peut mesurer est une forme physique qu'on peut améliorer.">Fitness you can measure is fitness you can improve.</h2>
+    <p class="lede" style="margin-inline:auto" data-fr="Le VO2 max est l'une des fenêtres les plus claires sur la capacité cardiorespiratoire — et l'une des rares mesures de forme physique qui réagit rapidement à l'entraînement. Notre objectif est simple&nbsp;: en faire un chiffre que vous pouvez voir évoluer, saison après saison, sans réserver de laboratoire.">VO2 max is one of the clearest windows into cardiorespiratory fitness — and one of the few fitness measures that responds quickly to training. Our goal is simple: make it a number you can watch move, season after season, without booking a lab.</p>
   </div>
 </section>
 
 <!-- APPROACH -->
 <section class="section">
   <div class="wrap">
-    <div class="reveal"><span class="eyebrow">Our approach</span><h2>What makes AeroCardia different.</h2></div>
+    <div class="reveal"><span class="eyebrow" data-fr="Notre approche">Our approach</span><h2 data-fr="Ce qui distingue AeroCardia.">What makes AeroCardia different.</h2></div>
     <div class="cards cards--3" style="margin-top:44px">
-      <div class="card reveal" data-d="1"><h3>Heart <em>and</em> lung</h3><p>The only consumer device that reports both cardiac and respiratory measurements from a single session — not just breathing.</p></div>
-      <div class="card reveal" data-d="2"><h3>Built on clinical data</h3><p>Our estimates are developed and checked against reference metabolic testing, with patent-pending methods and AI-enabled analytics.</p></div>
-      <div class="card reveal" data-d="3"><h3>Wellness first</h3><p>AeroCardia is designed for training and general wellness. It is not a medical device and does not diagnose disease — and we are deliberate about that line.</p></div>
+      <div class="card reveal" data-d="1"><h3 data-fr="Cœur <em>et</em> poumon">Heart <em>and</em> lung</h3><p data-fr="Rapporte à la fois des mesures cardiaques et respiratoires en une seule séance — pas seulement la respiration.">Reports both cardiac and respiratory measurements from a single session — not just breathing.</p></div>
+      <div class="card reveal" data-d="2"><h3 data-fr="Basé sur des données cliniques">Built on clinical data</h3><p data-fr="Nos estimations sont développées et vérifiées par rapport à des tests métaboliques de référence, avec des méthodes en instance de brevet et une analytique assistée par IA.">Our estimates are developed and checked against reference metabolic testing, with patent-pending methods and AI-enabled analytics.</p></div>
+      <div class="card reveal" data-d="3"><h3 data-fr="Le bien-être d'abord">Wellness first</h3><p data-fr="AeroCardia est conçu pour l'entraînement et le bien-être général. Ce n'est pas un dispositif médical et il ne diagnostique pas de maladie — et nous sommes délibérés quant à cette limite.">AeroCardia is designed for training and general wellness. It is not a medical device and does not diagnose disease — and we are deliberate about that line.</p></div>
     </div>
   </div>
 </section>
@@ -147,39 +150,39 @@
 <!-- LAB -->
 <section class="section" style="background:var(--bg-elev);border-top:1px solid var(--line)">
   <div class="wrap narrow center reveal">
-    <span class="eyebrow" style="justify-content:center">In development</span>
-    <h2>Tested every day, on real athletes.</h2>
-    <p class="lede" style="margin-inline:auto">The device you see on this site is a working prototype. Every iteration is validated on the bike and the treadmill against benchtop analysers, then refined — sensor placement, seal, weight, the feel of the strap.</p>
-    <p><a class="link" href="how-it-works.html">See how the sensing works <span class="arrow">&rarr;</span></a></p>
+    <span class="eyebrow" style="justify-content:center" data-fr="En développement">In development</span>
+    <h2 data-fr="Testé chaque jour, sur de vrais athlètes.">Tested every day, on real athletes.</h2>
+    <p class="lede" style="margin-inline:auto" data-fr="L'appareil que vous voyez sur ce site est un prototype fonctionnel. Chaque itération est validée sur vélo et sur tapis roulant par rapport à des analyseurs de paillasse, puis affinée — positionnement du capteur, étanchéité, poids, sensation de la sangle.">The device you see on this site is a working prototype. Every iteration is validated on the bike and the treadmill against benchtop analysers, then refined — sensor placement, seal, weight, the feel of the strap.</p>
+    <p><a class="link" href="how-it-works.html" data-fr="Voir comment fonctionne la détection <span class='arrow'>&rarr;</span>">See how the sensing works <span class="arrow">&rarr;</span></a></p>
   </div>
 </section>
 
 <!-- BACKERS -->
 <section class="section">
   <div class="wrap center reveal">
-    <span class="eyebrow" style="justify-content:center">Support &amp; recognition</span>
-    <h2>Backed by builders and clinicians.</h2>
+    <span class="eyebrow" style="justify-content:center" data-fr="Soutien et reconnaissance">Support &amp; recognition</span>
+    <h2 data-fr="Soutenu par des bâtisseurs et des cliniciens.">Backed by builders and clinicians.</h2>
     <div class="backers" style="margin-top:40px">
       <span class="backer"><img src="assets/img/logos/mcgill-dobson.png" alt="McGill Dobson Centre for Entrepreneurship" onerror="this.hidden=true;this.nextElementSibling.hidden=false" /><span class="backer__txt" hidden>McGill Dobson Centre for Entrepreneurship</span></span>
       <span class="backer"><img src="assets/img/logos/garage-co.png" alt="Garage&amp;Co" onerror="this.hidden=true;this.nextElementSibling.hidden=false" /><span class="backer__txt" hidden>Garage&amp;Co</span></span>
       <span class="backer"><img src="assets/img/logos/vitruvius.png" alt="Vitruvius Venture Studio" onerror="this.hidden=true;this.nextElementSibling.hidden=false" /><span class="backer__txt" hidden>Vitruvius Venture Studio</span></span>
       <span class="backer"><img src="assets/img/logos/marika-zelenka-roy.png" alt="Marika Zelenka Roy Innovation Prize" onerror="this.hidden=true;this.nextElementSibling.hidden=false" /><span class="backer__txt" hidden>Marika Zelenka Roy Innovation Prize</span></span>
     </div>
-    <p class="muted" style="margin-top:24px;font-size:14.5px">Recipient of the Marika Zelenka Roy Innovation Prize.</p>
+    <p class="muted" style="margin-top:24px;font-size:14.5px" data-fr="Lauréat du prix d'innovation Marika Zelenka Roy.">Recipient of the Marika Zelenka Roy Innovation Prize.</p>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" style="background:var(--bg-elev);border-top:1px solid var(--line)">
   <div class="wrap narrow reveal">
-    <span class="eyebrow">Get in touch</span>
-    <h2>Talk to the team.</h2>
-    <p class="lede">Press, partnerships, coaching enrolment or a question about the science — we read everything.</p>
+    <span class="eyebrow" data-fr="Nous contacter">Get in touch</span>
+    <h2 data-fr="Parlez à l'équipe.">Talk to the team.</h2>
+    <p class="lede" data-fr="Presse, partenariats, inscription à l'encadrement ou une question sur la science — nous lisons tout.">Press, partnerships, coaching enrolment or a question about the science — we read everything.</p>
     <p style="margin-top:20px">
       <a class="link" href="mailto:info@aerocardia.com">info@aerocardia.com</a>
     </p>
     <p class="muted" style="font-size:14px">AeroCardia &middot; 4200 Dorchester Boulevard W, Suite 310, Westmount, Quebec, Canada</p>
-    <div style="margin-top:22px"><a class="btn btn--primary btn--lg" href="waitlist.html">Join the waitlist <span class="arrow">&rarr;</span></a></div>
+    <div style="margin-top:22px"><a class="btn btn--primary btn--lg" href="waitlist.html" data-fr="Rejoindre la liste d'attente <span class='arrow'>&rarr;</span>">Join the waitlist <span class="arrow">&rarr;</span></a></div>
   </div>
 </section>
 
@@ -190,19 +193,20 @@
     <div class="footer__grid">
       <div>
         <a class="brand" href="index.html" style="margin-bottom:14px"><img class="brand__mark" src="assets/img/favicon.png" alt="" width="26" height="26" />AeroCardia</a>
-        <p class="muted" style="font-size:14px;max-width:32ch">VO2 max and cardiopulmonary data, anywhere.</p>
+        <p class="muted" style="font-size:14px;max-width:32ch" data-fr="Les données de VO2 max et cardiopulmonaires, partout.">VO2 max and cardiopulmonary data, anywhere.</p>
       </div>
-      <div><h4>Explore</h4><a href="product.html">Product</a><a href="how-it-works.html">How it works</a><a href="about.html">About us</a><a href="https://aerocardia.com/blog">Blog</a></div>
-      <div><h4>Get started</h4><a href="waitlist.html">Join the waitlist</a><a href="mailto:info@aerocardia.com">Contact the team</a></div>
-      <div><h4>Connect</h4><a href="https://www.linkedin.com/company/aerocardia/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/aerocardia" target="_blank" rel="noopener">Instagram</a><a href="mailto:info@aerocardia.com">info@aerocardia.com</a></div>
+      <div><h4 data-fr="Explorer">Explore</h4><a href="product.html" data-fr="Produit">Product</a><a href="how-it-works.html" data-fr="Comment ça marche">How it works</a><a href="about.html" data-fr="À propos">About us</a><a href="https://aerocardia.com/blog" data-fr="Blogue">Blog</a></div>
+      <div><h4 data-fr="Commencer">Get started</h4><a href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a><a href="mailto:info@aerocardia.com" data-fr="Contacter l'équipe">Contact the team</a></div>
+      <div><h4 data-fr="Nous suivre">Connect</h4><a href="https://www.linkedin.com/company/aerocardia/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/aerocardia" target="_blank" rel="noopener">Instagram</a><a href="mailto:info@aerocardia.com">info@aerocardia.com</a></div>
     </div>
     <div class="footer__bottom">
       <span>&copy; <span data-year>2026</span> AeroCardia. Westmount, Quebec, Canada.</span>
-      <span class="footer__disc">AeroCardia is intended exclusively for general wellness and fitness purposes. It is not a medical device and is not intended to diagnose, treat, cure or prevent any disease.</span>
+      <span class="footer__disc" data-fr="AeroCardia est destiné exclusivement à des fins de bien-être général et de mise en forme. Il n'est pas un dispositif médical et n'est pas destiné à être utilisé pour le diagnostic, le traitement, la guérison, l'atténuation, la prévention ou la surveillance d'une maladie ou d'une condition médicale.">AeroCardia is intended exclusively for general wellness and fitness purposes. It is not a medical device and is not intended for use in the diagnosis, treatment, cure, mitigation, prevention, or monitoring of any disease or medical condition.</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AeroCardia — Know your VO2 max. Anywhere.</title>
-<meta name="description" content="A lightweight, face-worn VO2 and breath sensor for runners, cyclists and longevity-focused athletes. Real-time oxygen, ventilation and effort data — no lab required." />
+<title data-fr="AeroCardia — Connaissez votre VO2 max. Partout.">AeroCardia — Know your VO2 max. Anywhere.</title>
+<meta name="description" content="A lightweight, face-worn VO2 and breath sensor for runners, cyclists and longevity-focused athletes. Real-time oxygen, ventilation and effort data — no lab required." data-fr-attrs="content" data-fr-attr-content="Un capteur léger de VO2 et de respiration, porté sur le visage, pour les coureurs, cyclistes et athlètes attentifs à leur longévité. Données d'oxygène, de ventilation et d'effort en temps réel — sans passer par un laboratoire." />
 <link rel="icon" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,34 +19,37 @@
   <div class="topbar__left">
     <button class="menu-open" id="menu-open" aria-expanded="false" aria-controls="menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-      <span class="menu-open__label">Menu</span>
+      <span class="menu-open__label" data-fr="Menu">Menu</span>
     </button>
-    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home">
+    <a class="topbar__brand" href="index.html" aria-label="AeroCardia home" data-fr-attrs="aria-label" data-fr-attr-aria-label="Accueil AeroCardia">
       <img src="assets/img/favicon.png" alt="" width="24" height="24" />AeroCardia
     </a>
   </div>
-  <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html">Join the waitlist</a>
+  <div class="topbar__right">
+    <button type="button" class="lang-toggle" data-lang-toggle aria-pressed="false">FR</button>
+    <a class="btn btn--primary btn--sm topbar__cta" href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a>
+  </div>
 </header>
 
 <!-- ============ FULLSCREEN MENU (shared) ============ -->
 <div class="menu" id="menu" aria-hidden="true">
   <div class="menu__backdrop" data-menu-close></div>
-  <nav class="menu__panel" aria-label="Main menu">
+  <nav class="menu__panel" aria-label="Main menu" data-fr-attrs="aria-label" data-fr-attr-aria-label="Menu principal">
     <button class="menu__close" id="menu-close" data-menu-close>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      Close
+      <span data-fr="Fermer">Close</span>
     </button>
     <div class="menu__nav">
-      <a class="menu__link" href="index.html"><span class="menu__linkText">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="product.html"><span class="menu__linkText">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="about.html"><span class="menu__linkText">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="menu__link" href="index.html#blog"><span class="menu__linkText">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html"><span class="menu__linkText" data-fr="Accueil">Home</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="product.html"><span class="menu__linkText" data-fr="Produit">Product</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="how-it-works.html"><span class="menu__linkText" data-fr="Comment ça marche">How it works</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="about.html"><span class="menu__linkText" data-fr="À propos">About</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="menu__link" href="index.html#blog"><span class="menu__linkText" data-fr="Blogue">Blog</span><svg class="menu__arrow icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
     <div class="menu__foot">
-      <span class="menu__footLabel">Get in touch</span>
+      <span class="menu__footLabel" data-fr="Nous contacter">Get in touch</span>
       <a class="menu__mail" href="mailto:info@aerocardia.com">info@aerocardia.com</a>
-      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html">Join the waitlist</a></div>
+      <div style="margin-top:18px"><a class="btn btn--primary" href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a></div>
     </div>
   </nav>
 </div>
@@ -87,14 +90,14 @@
   <div class="hero-glass__inner">
     <div class="hero-glass__row">
       <div class="hero-glass__copy reveal in">
-        <span class="eyebrow">Portable VO2 &amp; breath sensor</span>
-        <h1>Real-time guidance<br />for every run &amp; ride.</h1>
-        <p class="hero-glass__lede">Clip on the cup, breathe like you always do, and go. AeroCardia reads your oxygen uptake, ventilation and effort live — the lab test for endurance and longevity, in every session.</p>
+        <span class="eyebrow" data-fr="Capteur portable de VO2 et de respiration">Portable VO2 &amp; breath sensor</span>
+        <h1 data-fr="Des repères en temps réel<br />pour chaque course et sortie.">Real-time guidance<br />for every run &amp; ride.</h1>
+        <p class="hero-glass__lede" data-fr="Fixez le cache, respirez comme d'habitude, et partez. AeroCardia lit votre consommation d'oxygène (VO2), votre ventilation et votre effort en direct — le test de laboratoire pour l'endurance et la longévité, à chaque séance.">Clip on the cup, breathe like you always do, and go. AeroCardia reads your oxygen uptake, ventilation and effort live — the lab test for endurance and longevity, in every session.</p>
         <div class="hero-glass__actions">
-          <a class="btn btn--primary btn--lg" href="waitlist.html">Join the waitlist <span class="arrow">&rarr;</span></a>
-          <a class="btn btn--ghost btn--lg" href="how-it-works.html">See how it works</a>
+          <a class="btn btn--primary btn--lg" href="waitlist.html" data-fr="Rejoindre la liste d'attente <span class='arrow'>&rarr;</span>">Join the waitlist <span class="arrow">&rarr;</span></a>
+          <a class="btn btn--ghost btn--lg" href="how-it-works.html" data-fr="Voir comment ça marche">See how it works</a>
         </div>
-        <p class="hero-glass__note">For general wellness and fitness use. AeroCardia is not a medical device.</p>
+        <p class="hero-glass__note" data-fr="Pour un usage de bien-être général et de mise en forme. AeroCardia n'est pas un dispositif médical.">For general wellness and fitness use. AeroCardia is not a medical device.</p>
       </div>
 
       <aside class="glass-card" data-glass-card>
@@ -102,7 +105,7 @@
         <div class="glass-card__frost" aria-hidden="true"></div>
 
         <div class="glass-card__head">
-          <h2 class="glass-card__title">From your last session</h2>
+          <h2 class="glass-card__title" data-fr="Votre dernière séance">From your last session</h2>
           <span class="glass-card__index">//02</span>
         </div>
 
@@ -112,7 +115,7 @@
             <span class="glass-metric__v">44.1<small>ml/kg/min</small></span>
           </div>
           <div class="glass-metric">
-            <span class="glass-metric__k">Minute ventilation</span>
+            <span class="glass-metric__k" data-fr="Ventilation minute">Minute ventilation</span>
             <span class="glass-metric__v">96<small>L/min</small></span>
           </div>
           <div class="glass-metric">
@@ -120,8 +123,8 @@
             <span class="glass-metric__v">0.98</span>
           </div>
           <div class="glass-metric">
-            <span class="glass-metric__k">Threshold</span>
-            <span class="glass-metric__v">held<small>52:00</small></span>
+            <span class="glass-metric__k" data-fr="Seuil">Threshold</span>
+            <span class="glass-metric__v" data-fr="maintenu<small>52:00</small>">held<small>52:00</small></span>
           </div>
         </div>
 
@@ -133,13 +136,13 @@
     </div>
   </div>
 
-  <span class="hero-scroll" aria-hidden="true">Scroll</span>
+  <span class="hero-scroll" aria-hidden="true" data-fr="Défiler">Scroll</span>
 </section>
 
 <!-- ============ TRUST STRIP ============ -->
 <section class="section section--tight">
   <div class="wrap center reveal">
-    <p class="muted" style="letter-spacing:.08em;font-size:13px;text-transform:uppercase;margin-bottom:22px">Backed by</p>
+    <p class="muted" style="letter-spacing:.08em;font-size:13px;text-transform:uppercase;margin-bottom:22px" data-fr="Soutenu par">Backed by</p>
     <div class="backers">
       <span class="backer"><img src="assets/img/logos/mcgill-dobson.png" alt="McGill Dobson Centre for Entrepreneurship" onerror="this.hidden=true;this.nextElementSibling.hidden=false" /><span class="backer__txt" hidden>McGill Dobson Centre for Entrepreneurship</span></span>
       <span class="backer"><img src="assets/img/logos/garage-co.png" alt="Garage&amp;Co" onerror="this.hidden=true;this.nextElementSibling.hidden=false" /><span class="backer__txt" hidden>Garage&amp;Co</span></span>
@@ -153,9 +156,9 @@
 <section class="section" id="features">
   <div class="wrap">
     <div class="narrow reveal">
-      <span class="eyebrow">What you get</span>
-      <h2>Personalised run &amp; ride training. Powered by the best data.</h2>
-      <p class="lede">Heart rate tells you how hard your heart is working. AeroCardia tells you what your whole system is doing — how much oxygen you are actually using, and how close you are to your ceiling.</p>
+      <span class="eyebrow" data-fr="Ce que vous obtenez">What you get</span>
+      <h2 data-fr="Un entraînement personnalisé course et vélo. Propulsé par les meilleures données.">Personalised run &amp; ride training. Powered by the best data.</h2>
+      <p class="lede" data-fr="La fréquence cardiaque vous indique l'intensité du travail de votre cœur. AeroCardia vous montre ce que fait l'ensemble de votre système — la quantité d'oxygène que vous utilisez réellement, et à quel point vous êtes près de votre plafond.">Heart rate tells you how hard your heart is working. AeroCardia tells you what your whole system is doing — how much oxygen you are actually using, and how close you are to your ceiling.</p>
     </div>
     <div class="numbered" style="margin-top:48px">
       <article class="ncard reveal" data-d="1">
@@ -163,27 +166,27 @@
           <span class="ncard__n">1</span>
         </div>
         <div class="ncard__body">
-          <h3>Real-time guidance</h3>
-          <p>Live VO2, ventilation and effort stream to your watch or head unit — so you hold the right zone on every hill and interval, not a guess from max heart rate.</p>
+          <h3 data-fr="Repères en temps réel">Real-time guidance</h3>
+          <p data-fr="VO2, ventilation et effort en direct, transmis à votre montre ou compteur — pour rester dans la bonne zone à chaque côte et chaque intervalle, sans deviner à partir d'une fréquence cardiaque maximale.">Live VO2, ventilation and effort stream to your watch or head unit — so you hold the right zone on every hill and interval, not a guess from max heart rate.</p>
           <ul class="ncard__list">
-            <li>Live oxygen &amp; breathing feedback</li>
-            <li>Zones from measured thresholds</li>
-            <li>Works on the road, trail and bike</li>
+            <li data-fr="Retour en direct sur l'oxygène et la respiration">Live oxygen &amp; breathing feedback</li>
+            <li data-fr="Des zones basées sur des seuils mesurés">Zones from measured thresholds</li>
+            <li data-fr="Fonctionne sur route, sentier et vélo">Works on the road, trail and bike</li>
           </ul>
         </div>
       </article>
       <article class="ncard reveal" data-d="2">
         <div class="ncard__media">
-          <img src="assets/img/vo2-phases.jpg" alt="Runner training at sunrise" loading="lazy" />
+          <img src="assets/img/vo2-phases.jpg" alt="Runner training at sunrise" loading="lazy" data-fr-attrs="alt" data-fr-attr-alt="Coureur à l'entraînement, au lever du soleil" />
           <span class="ncard__n">2</span>
         </div>
         <div class="ncard__body">
-          <h3>Train in phases</h3>
-          <p>Build an aerobic base, test where you are, then sharpen for race day. Each session becomes feedback: was that aerobic, or did you drift?</p>
+          <h3 data-fr="S'entraîner par phases">Train in phases</h3>
+          <p data-fr="Construisez une base aérobie, évaluez où vous en êtes, puis affinez votre préparation pour le jour de la course. Chaque séance devient un retour d'information : était-ce vraiment aérobie, ou avez-vous dérivé&nbsp;?">Build an aerobic base, test where you are, then sharpen for race day. Each session becomes feedback: was that aerobic, or did you drift?</p>
           <ul class="ncard__list">
-            <li>Foundation, test and peak blocks</li>
-            <li>Session review after every workout</li>
-            <li>VO2 max tracked as a long-term trend</li>
+            <li data-fr="Blocs de fondation, de test et d'affûtage">Foundation, test and peak blocks</li>
+            <li data-fr="Bilan de séance après chaque entraînement">Session review after every workout</li>
+            <li data-fr="VO2 max suivi comme une tendance à long terme">VO2 max tracked as a long-term trend</li>
           </ul>
         </div>
       </article>
@@ -192,12 +195,12 @@
           <span class="ncard__n">3</span>
         </div>
         <div class="ncard__body">
-          <h3>Race-day targets</h3>
-          <p>Turn months of real gas-exchange data into pacing you can trust — from a 10k to a marathon or a gran fondo, know what is sustainable before you spend it.</p>
+          <h3 data-fr="Objectifs du jour de course">Race-day targets</h3>
+          <p data-fr="Transformez des mois de données réelles d'échanges gazeux en une allure fiable — du 10&nbsp;km au marathon ou à une gran fondo, sachez ce qui est tenable avant de le dépenser.">Turn months of real gas-exchange data into pacing you can trust — from a 10k to a marathon or a gran fondo, know what is sustainable before you spend it.</p>
           <ul class="ncard__list">
-            <li>Threshold pace &amp; power targets</li>
-            <li>Fuelling cues from live RER</li>
-            <li>Peak when it matters</li>
+            <li data-fr="Allures et puissances cibles au seuil">Threshold pace &amp; power targets</li>
+            <li data-fr="Repères de ravitaillement grâce au RER en direct">Fuelling cues from live RER</li>
+            <li data-fr="Être au sommet quand ça compte">Peak when it matters</li>
           </ul>
         </div>
       </article>
@@ -212,21 +215,21 @@
       <div class="reveal">
         <div class="stage">
           <div class="stage__frames stage__float">
-            <img src="assets/img/device-black-teal-2.png" alt="AeroCardia breath sensor, three-quarter view" />
+            <img src="assets/img/device-black-teal-2.png" alt="AeroCardia breath sensor, three-quarter view" data-fr-attrs="alt" data-fr-attr-alt="Capteur de respiration AeroCardia, vue de trois quarts" />
           </div>
-          <span class="stage__badge">Soft mask &middot; head strap &middot; sensor pod</span>
+          <span class="stage__badge" data-fr="Cache souple &middot; sangle de tête &middot; module capteur">Soft mask &middot; head strap &middot; sensor pod</span>
         </div>
       </div>
       <div class="reveal" data-d="1">
-        <span class="eyebrow">Setup</span>
-        <h2>Clip it on in seconds and go.</h2>
-        <p class="lede">A soft cup seals over your nose and mouth, a light strap holds it, and the sensor pod does the rest.</p>
+        <span class="eyebrow" data-fr="Mise en place">Setup</span>
+        <h2 data-fr="Installez-le en quelques secondes, et partez.">Clip it on in seconds and go.</h2>
+        <p class="lede" data-fr="Un cache souple se place sur le nez et la bouche, une sangle légère le maintient, et le module capteur fait le reste.">A soft cup seals over your nose and mouth, a light strap holds it, and the sensor pod does the rest.</p>
         <ul>
-          <li>Pairs over Bluetooth</li>
-          <li>Sweat- and weather-resistant for outdoor training</li>
-          <li>Up to 8 hours of battery life</li>
+          <li data-fr="Se jumelle en Bluetooth">Pairs over Bluetooth</li>
+          <li data-fr="Résistant à la sueur et aux intempéries pour l'entraînement en extérieur">Sweat- and weather-resistant for outdoor training</li>
+          <li data-fr="Jusqu'à 8 heures d'autonomie">Up to 8 hours of battery life</li>
         </ul>
-        <p style="margin-top:22px"><a class="link" href="how-it-works.html">How the sensing works <span class="arrow">&rarr;</span></a></p>
+        <p style="margin-top:22px"><a class="link" href="how-it-works.html" data-fr="Comment fonctionne la détection <span class='arrow'>&rarr;</span>">How the sensing works <span class="arrow">&rarr;</span></a></p>
       </div>
     </div>
   </div>
@@ -237,18 +240,18 @@
   <div class="wrap">
     <div class="split split--reverse">
       <div class="split__media reveal" style="padding:0;border:0;background:none">
-        <img src="assets/img/vo2-phases.jpg" alt="Runner stretching at sunrise before a session" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" />
+        <img src="assets/img/vo2-phases.jpg" alt="Runner stretching at sunrise before a session" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius)" data-fr-attrs="alt" data-fr-attr-alt="Coureur qui s'étire au lever du soleil avant une séance" />
       </div>
       <div class="reveal" data-d="1">
-        <span class="eyebrow">From the blog</span>
-        <h2>Train in phases. Peak when it matters.</h2>
-        <p class="lede">Raising VO2 max is not about going hard every day. It is about building an aerobic base, testing where you are, then sharpening for the event that counts.</p>
+        <span class="eyebrow" data-fr="Depuis le blogue">From the blog</span>
+        <h2 data-fr="S'entraîner par phases. Être au sommet quand ça compte.">Train in phases. Peak when it matters.</h2>
+        <p class="lede" data-fr="Augmenter son VO2 max ne veut pas dire s'entraîner intensément tous les jours. Il s'agit de construire une base aérobie, d'évaluer où l'on en est, puis d'affiner sa préparation pour l'événement qui compte.">Raising VO2 max is not about going hard every day. It is about building an aerobic base, testing where you are, then sharpening for the event that counts.</p>
         <div class="cards cards--3" style="gap:14px;margin-top:22px">
-          <div class="phase phase--1"><span class="phase__tag">Foundation</span><p>Easy-paced volume that grows your aerobic engine. AeroCardia keeps you genuinely easy.</p></div>
-          <div class="phase phase--2"><span class="phase__tag">Test</span><p>A structured ramp gives you a real VO2 max number and fresh threshold paces.</p></div>
-          <div class="phase phase--3"><span class="phase__tag">Peak</span><p>Short intervals near VO2 max, spaced for recovery, so you sharpen without digging a hole.</p></div>
+          <div class="phase phase--1"><span class="phase__tag" data-fr="Fondation">Foundation</span><p data-fr="Un volume à allure facile qui développe votre moteur aérobie. AeroCardia vous garde réellement dans l'effort facile.">Easy-paced volume that grows your aerobic engine. AeroCardia keeps you genuinely easy.</p></div>
+          <div class="phase phase--2"><span class="phase__tag" data-fr="Test">Test</span><p data-fr="Une montée progressive structurée vous donne un véritable VO2 max et des allures de seuil à jour.">A structured ramp gives you a real VO2 max number and fresh threshold paces.</p></div>
+          <div class="phase phase--3"><span class="phase__tag" data-fr="Affûtage">Peak</span><p data-fr="De courts intervalles proches du VO2 max, espacés pour permettre la récupération, afin d'affiner la forme sans s'épuiser.">Short intervals near VO2 max, spaced for recovery, so you sharpen without digging a hole.</p></div>
         </div>
-        <p style="margin-top:22px"><a class="link" href="https://aerocardia.com/blog">Read: How to improve your VO2 max <span class="arrow">&rarr;</span></a></p>
+        <p style="margin-top:22px"><a class="link" href="https://aerocardia.com/blog" data-fr="À lire&nbsp;: comment améliorer son VO2 max <span class='arrow'>&rarr;</span>">Read: How to improve your VO2 max <span class="arrow">&rarr;</span></a></p>
       </div>
     </div>
   </div>
@@ -259,34 +262,34 @@
   <div class="wrap">
     <div class="uci__grid">
       <div class="reveal">
-        <span class="eyebrow">Championship edition</span>
-        <h2>Sport your team's colours.</h2>
-        <p class="lede">Express your country with enthusiasm. Match your sensor to your national colours for the UCI Road World Championships — or your club, your flag, your race day.</p>
-        <div class="flags" role="group" aria-label="Choose a nation">
-          <button class="flag is-active" data-country="Netherlands" data-cw="Copper" data-accent="#F36F21" data-img="assets/img/device-black-copper-side.png">
+        <span class="eyebrow" data-fr="Édition championnat">Championship edition</span>
+        <h2 data-fr="Portez les couleurs de votre équipe.">Sport your team's colours.</h2>
+        <p class="lede" data-fr="Affichez les couleurs de votre pays avec enthousiasme. Assortissez votre capteur à vos couleurs nationales pour les Championnats du monde de cyclisme sur route UCI — ou à votre club, votre drapeau, votre jour de course.">Express your country with enthusiasm. Match your sensor to your national colours for the UCI Road World Championships — or your club, your flag, your race day.</p>
+        <div class="flags" role="group" aria-label="Choose a nation" data-fr-attrs="aria-label" data-fr-attr-aria-label="Choisissez une nation">
+          <button class="flag is-active" data-country="Netherlands" data-country-fr="Pays-Bas" data-cw="Copper" data-accent="#F36F21" data-img="assets/img/device-black-copper-side.png" data-fr="<span class='flag__dot' style='background:#F36F21'></span>Pays-Bas">
             <span class="flag__dot" style="background:#F36F21"></span>Netherlands
           </button>
-          <button class="flag" data-country="Ireland" data-cw="Racing Green" data-accent="#169B62" data-img="assets/img/device-green-gold.png">
+          <button class="flag" data-country="Ireland" data-country-fr="Irlande" data-cw="Racing Green" data-accent="#169B62" data-img="assets/img/device-green-gold.png" data-fr="<span class='flag__dot' style='background:linear-gradient(90deg,#169B62 60%,#FF883E 60%)'></span>Irlande">
             <span class="flag__dot" style="background:linear-gradient(90deg,#169B62 60%,#FF883E 60%)"></span>Ireland
           </button>
-          <button class="flag" data-country="Slovenia" data-cw="Signal Teal" data-accent="#29B0A6" data-img="assets/img/device-black-teal.png">
+          <button class="flag" data-country="Slovenia" data-country-fr="Slovénie" data-cw="Signal Teal" data-accent="#29B0A6" data-img="assets/img/device-black-teal.png" data-fr="<span class='flag__dot' style='background:#29B0A6'></span>Slovénie">
             <span class="flag__dot" style="background:#29B0A6"></span>Slovenia
           </button>
-          <button class="flag" data-country="Great Britain" data-cw="Cobalt" data-accent="#3A6DF0" data-img="assets/img/device-566.png">
+          <button class="flag" data-country="Great Britain" data-country-fr="Grande-Bretagne" data-cw="Cobalt" data-accent="#3A6DF0" data-img="assets/img/device-566.png" data-fr="<span class='flag__dot' style='background:linear-gradient(90deg,#C8102E 45%,#fff 45% 55%,#012169 55%)'></span>Grande-Bretagne">
             <span class="flag__dot" style="background:linear-gradient(90deg,#C8102E 45%,#fff 45% 55%,#012169 55%)"></span>Great Britain
           </button>
-          <button class="flag" data-country="Belgium" data-cw="Sunflower" data-accent="#F7C531" data-img="assets/img/device-white-yellow.png">
+          <button class="flag" data-country="Belgium" data-country-fr="Belgique" data-cw="Sunflower" data-accent="#F7C531" data-img="assets/img/device-white-yellow.png" data-fr="<span class='flag__dot' style='background:linear-gradient(90deg,#1a1a1a 33%,#F7C531 33% 66%,#EF3340 66%)'></span>Belgique">
             <span class="flag__dot" style="background:linear-gradient(90deg,#1a1a1a 33%,#F7C531 33% 66%,#EF3340 66%)"></span>Belgium
           </button>
         </div>
-        <p class="muted" style="font-size:13.5px"><strong data-uci-label style="color:var(--text)">Netherlands</strong> &middot; <span data-uci-cw>Copper</span> colourway. France, Slovenia and more editions confirmed closer to the race.</p>
+        <p class="muted" style="font-size:13.5px"><strong data-uci-label style="color:var(--text)">Netherlands</strong> &middot; <span data-uci-cw>Copper</span> <span data-fr="teinte. La France, la Slovénie et d'autres éditions seront confirmées à l'approche de la course.">colourway. France, Slovenia and more editions confirmed closer to the race.</span></p>
       </div>
       <div class="reveal" data-d="1">
         <div class="stage" data-uci-shell style="--shell-accent:#F36F21">
           <div class="stage__frames stage__float">
-            <img data-uci-img src="assets/img/device-black-copper-side.png" alt="AeroCardia sensor in team colours" />
+            <img data-uci-img src="assets/img/device-black-copper-side.png" alt="AeroCardia sensor in team colours" data-fr-attrs="alt" data-fr-attr-alt="Capteur AeroCardia aux couleurs de l'équipe" />
           </div>
-          <span class="stage__badge">Championship edition</span>
+          <span class="stage__badge" data-fr="Édition championnat">Championship edition</span>
         </div>
       </div>
     </div>
@@ -298,37 +301,37 @@
   <div class="wrap">
     <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
       <div>
-        <span class="eyebrow">The blog</span>
-        <h2>Reading on oxygen, endurance &amp; healthspan.</h2>
+        <span class="eyebrow" data-fr="Le blogue">The blog</span>
+        <h2 data-fr="Lectures sur l'oxygène, l'endurance et la santé à long terme.">Reading on oxygen, endurance &amp; healthspan.</h2>
       </div>
-      <a class="link" href="https://aerocardia.com/blog">All posts <span class="arrow">&rarr;</span></a>
+      <a class="link" href="https://aerocardia.com/blog" data-fr="Tous les articles <span class='arrow'>&rarr;</span>">All posts <span class="arrow">&rarr;</span></a>
     </div>
     <div class="posts" style="margin-top:44px">
       <a class="post reveal" data-d="1" href="https://aerocardia.com/blog-tour-de-france-vo2-max">
         <div class="post__img"></div>
         <div class="post__body">
-          <div class="post__meta">Aug 20 &middot; 4 min read</div>
-          <h3>Peak Performance and Longevity: The Tour de France Guide to VO2 Max</h3>
-          <p>What three weeks of racing at the limit of human endurance teaches the rest of us about pacing, ceilings and recovery.</p>
-          <span class="link" style="margin-top:14px">Read <span class="arrow">&rarr;</span></span>
+          <div class="post__meta" data-fr="20 août &middot; 4 min de lecture">Aug 20 &middot; 4 min read</div>
+          <h3 data-fr="Performance et longévité : ce que le Tour de France enseigne sur le VO2 max">Peak Performance and Longevity: The Tour de France Guide to VO2 Max</h3>
+          <p data-fr="Ce que trois semaines de course à la limite de l'endurance humaine nous apprennent, à nous aussi, sur l'allure, les plafonds et la récupération.">What three weeks of racing at the limit of human endurance teaches the rest of us about pacing, ceilings and recovery.</p>
+          <span class="link" style="margin-top:14px" data-fr="Lire <span class='arrow'>&rarr;</span>">Read <span class="arrow">&rarr;</span></span>
         </div>
       </a>
       <a class="post reveal" data-d="2" href="https://aerocardia.com/blog-vo2-max-measurement-guide">
         <div class="post__img"><img src="assets/img/vo2-phases.jpg" alt="" loading="lazy" /></div>
         <div class="post__body">
-          <div class="post__meta">Jul 27 &middot; 4 min read</div>
-          <h3>The Ultimate Guide to VO2 Max: Measurement, Normative Data &amp; Optimization</h3>
-          <p>How VO2 max is measured, what a good score looks like by age and sex, and the training that actually moves it.</p>
-          <span class="link" style="margin-top:14px">Read <span class="arrow">&rarr;</span></span>
+          <div class="post__meta" data-fr="27 juillet &middot; 4 min de lecture">Jul 27 &middot; 4 min read</div>
+          <h3 data-fr="Le guide complet du VO2 max : mesure, données normatives et optimisation">The Ultimate Guide to VO2 Max: Measurement, Normative Data &amp; Optimization</h3>
+          <p data-fr="Comment le VO2 max est mesuré, à quoi ressemble un bon résultat selon l'âge et le sexe, et l'entraînement qui le fait réellement progresser.">How VO2 max is measured, what a good score looks like by age and sex, and the training that actually moves it.</p>
+          <span class="link" style="margin-top:14px" data-fr="Lire <span class='arrow'>&rarr;</span>">Read <span class="arrow">&rarr;</span></span>
         </div>
       </a>
       <a class="post reveal" data-d="3" href="https://aerocardia.com/blog-vo2-max-healthspan">
         <div class="post__img"></div>
         <div class="post__body">
-          <div class="post__meta">Jul 13 &middot; 3 min read</div>
-          <h3>What Is VO2 Max, and Why Does It Matter?</h3>
-          <p>The gold-standard measure of cardiorespiratory fitness — and a key benchmark for your training.</p>
-          <span class="link" style="margin-top:14px">Read <span class="arrow">&rarr;</span></span>
+          <div class="post__meta" data-fr="13 juillet &middot; 3 min de lecture">Jul 13 &middot; 3 min read</div>
+          <h3 data-fr="Qu'est-ce que le VO2 max, et pourquoi est-ce important ?">What Is VO2 Max, and Why Does It Matter?</h3>
+          <p data-fr="La mesure étalon de la capacité cardiorespiratoire — et un repère clé pour votre entraînement.">The gold-standard measure of cardiorespiratory fitness — and a key benchmark for your training.</p>
+          <span class="link" style="margin-top:14px" data-fr="Lire <span class='arrow'>&rarr;</span>">Read <span class="arrow">&rarr;</span></span>
         </div>
       </a>
     </div>
@@ -344,9 +347,9 @@
 <section class="section">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Be first to train with your own numbers.</h2>
-      <p>AeroCardia is coming to runners, cyclists and longevity athletes. Join the waitlist for early access, launch pricing and updates from the team.</p>
-      <div style="margin-top:26px"><a class="btn btn--primary btn--lg" href="waitlist.html">Join the waitlist <span class="arrow">&rarr;</span></a></div>
+      <h2 data-fr="Soyez parmi les premiers à vous entraîner avec vos propres chiffres.">Be first to train with your own numbers.</h2>
+      <p data-fr="AeroCardia arrive pour les coureurs, cyclistes et athlètes attentifs à leur longévité. Rejoignez la liste d'attente pour un accès anticipé, un tarif de lancement et les nouvelles de l'équipe.">AeroCardia is coming to runners, cyclists and longevity athletes. Join the waitlist for early access, launch pricing and updates from the team.</p>
+      <div style="margin-top:26px"><a class="btn btn--primary btn--lg" href="waitlist.html" data-fr="Rejoindre la liste d'attente <span class='arrow'>&rarr;</span>">Join the waitlist <span class="arrow">&rarr;</span></a></div>
     </div>
   </div>
 </section>
@@ -362,22 +365,22 @@
           <img class="brand__mark" src="assets/img/favicon.png" alt="" width="26" height="26" />
           AeroCardia
         </a>
-        <p class="muted" style="font-size:14px;max-width:32ch">VO2 max and cardiopulmonary data, anywhere. For athletes, coaches and anyone training for a longer, stronger life.</p>
+        <p class="muted" style="font-size:14px;max-width:32ch" data-fr="Les données de VO2 max et cardiopulmonaires, partout. Pour les athlètes, entraîneurs et toute personne qui s'entraîne pour une vie plus longue et plus forte.">VO2 max and cardiopulmonary data, anywhere. For athletes, coaches and anyone training for a longer, stronger life.</p>
       </div>
       <div>
-        <h4>Explore</h4>
-        <a href="product.html">Product</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="about.html">About us</a>
-        <a href="https://aerocardia.com/blog">Blog</a>
+        <h4 data-fr="Explorer">Explore</h4>
+        <a href="product.html" data-fr="Produit">Product</a>
+        <a href="how-it-works.html" data-fr="Comment ça marche">How it works</a>
+        <a href="about.html" data-fr="À propos">About us</a>
+        <a href="https://aerocardia.com/blog" data-fr="Blogue">Blog</a>
       </div>
       <div>
-        <h4>Get started</h4>
-        <a href="waitlist.html">Join the waitlist</a>
-        <a href="mailto:info@aerocardia.com">Contact the team</a>
+        <h4 data-fr="Commencer">Get started</h4>
+        <a href="waitlist.html" data-fr="Rejoindre la liste d'attente">Join the waitlist</a>
+        <a href="mailto:info@aerocardia.com" data-fr="Contacter l'équipe">Contact the team</a>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h4 data-fr="Nous suivre">Connect</h4>
         <a href="https://www.linkedin.com/company/aerocardia/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.instagram.com/aerocardia" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:info@aerocardia.com">info@aerocardia.com</a>
@@ -385,11 +388,12 @@
     </div>
     <div class="footer__bottom">
       <span>&copy; <span data-year>2026</span> AeroCardia. 4200 Dorchester Blvd W, Suite 310, Westmount, Quebec, Canada.</span>
-      <span class="footer__disc">AeroCardia is intended exclusively for general wellness and fitness purposes. It is not a medical device and is not intended to diagnose, treat, cure or prevent any disease.</span>
+      <span class="footer__disc" data-fr="AeroCardia est destiné exclusivement à des fins de bien-être général et de mise en forme. Il n'est pas un dispositif médical et n'est pas destiné à être utilisé pour le diagnostic, le traitement, la guérison, l'atténuation, la prévention ou la surveillance d'une maladie ou d'une condition médicale.">AeroCardia is intended exclusively for general wellness and fitness purposes. It is not a medical device and is not intended for use in the diagnosis, treatment, cure, mitigation, prevention, or monitoring of any disease or medical condition.</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/glass-card.js"></script>
 <script src="assets/js/main.js"></script>
